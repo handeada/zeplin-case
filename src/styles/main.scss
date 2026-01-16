@@ -1,0 +1,119 @@
+// ===========================================
+// Main Styles - Zeplin Case UI Kit
+// ===========================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Tailwind imports
+@import "tailwindcss";
+
+// CSS Custom Properties for Tailwind integration
+:root {
+  // Colors
+  --color-primary: #{color('primary')};
+  --color-primary-light: #{color('primary-light')};
+  --color-primary-lighter: #{color('primary-lighter')};
+  --color-primary-dark: #{color('primary-dark')};
+
+  --color-success: #{color('success')};
+  --color-success-light: #{color('success-light')};
+  --color-warning: #{color('warning')};
+  --color-warning-light: #{color('warning-light')};
+  --color-error: #{color('error')};
+  --color-error-light: #{color('error-light')};
+  --color-info: #{color('info')};
+  --color-info-light: #{color('info-light')};
+
+  --color-gray-50: #{color('gray-50')};
+  --color-gray-100: #{color('gray-100')};
+  --color-gray-200: #{color('gray-200')};
+  --color-gray-300: #{color('gray-300')};
+  --color-gray-400: #{color('gray-400')};
+  --color-gray-500: #{color('gray-500')};
+  --color-gray-600: #{color('gray-600')};
+  --color-gray-700: #{color('gray-700')};
+  --color-gray-800: #{color('gray-800')};
+  --color-gray-900: #{color('gray-900')};
+
+  // Typography
+  --font-family: #{$font-family-base};
+}
+
+// Tailwind theme customization
+@theme {
+  --color-primary: #1e5aa8;
+  --color-primary-light: #e8f0f8;
+  --color-primary-lighter: #f5f8fc;
+  --color-primary-dark: #164785;
+
+  --color-success: #22c55e;
+  --color-success-light: #dcfce7;
+  --color-warning: #f97316;
+  --color-warning-light: #ffedd5;
+  --color-error: #ef4444;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-light: #dbeafe;
+}
+
+// Global Reset & Base Styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: map-get($font-sizes, 'body');
+  line-height: map-get($line-heights, 'body');
+  color: color('text-primary');
+  background-color: color('bg-light');
+}
+
+// Typography utility classes
+.text-primary { color: color('text-primary'); }
+.text-secondary { color: color('text-secondary'); }
+.text-muted { color: color('text-muted'); }
+
+// Headings
+h1, .h1 { @include heading('h1'); }
+h2, .h2 { @include heading('h2'); }
+h3, .h3 { @include heading('h3'); }
+h4, .h4 { @include heading('h4'); }
+h5, .h5 { @include heading('h5'); }
+h6, .h6 { @include heading('h6'); }
+
+// Font weight utilities
+.font-light { font-weight: map-get($font-weights, 'light'); }
+.font-regular { font-weight: map-get($font-weights, 'regular'); }
+.font-medium { font-weight: map-get($font-weights, 'medium'); }
+.font-semibold { font-weight: map-get($font-weights, 'semibold'); }
+.font-bold { font-weight: map-get($font-weights, 'bold'); }
+
+// Link styles
+a {
+  color: color('primary');
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: color('primary-dark');
+    text-decoration: underline;
+  }
+}
+
+// Selection
+::selection {
+  background-color: color('primary-light');
+  color: color('primary-dark');
+}

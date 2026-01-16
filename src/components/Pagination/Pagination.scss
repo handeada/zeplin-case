@@ -1,0 +1,73 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  &__pages {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__button {
+    @include flex-center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    font-family: $font-family-base;
+    font-weight: 500;
+    font-size: 14px;
+    color: color('gray-500');
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 150ms ease;
+
+    &:hover:not(:disabled):not(.pagination__button--active) {
+      background-color: color('gray-100');
+      color: color('gray-700');
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--active {
+      background-color: color('primary');
+      color: white;
+    }
+
+    &--nav {
+      color: color('gray-400');
+      min-width: 32px;
+
+      &:hover:not(:disabled) {
+        color: color('gray-600');
+        background-color: color('gray-100');
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    color: color('gray-400');
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,55 @@
+@use '../../styles/variables' as *;
+
+.typography {
+  font-family: $font-family-base;
+  color: color('text-primary');
+  margin: 0;
+
+  // Variants
+  &--h1 {
+    font-size: map-get($font-sizes, 'h1');
+    line-height: map-get($line-heights, 'h1');
+  }
+
+  &--h2 {
+    font-size: map-get($font-sizes, 'h2');
+    line-height: map-get($line-heights, 'h2');
+  }
+
+  &--h3 {
+    font-size: map-get($font-sizes, 'h3');
+    line-height: map-get($line-heights, 'h3');
+  }
+
+  &--h4 {
+    font-size: map-get($font-sizes, 'h4');
+    line-height: map-get($line-heights, 'h4');
+  }
+
+  &--h5 {
+    font-size: map-get($font-sizes, 'h5');
+    line-height: map-get($line-heights, 'h5');
+  }
+
+  &--h6 {
+    font-size: map-get($font-sizes, 'h6');
+    line-height: map-get($line-heights, 'h6');
+  }
+
+  &--body {
+    font-size: map-get($font-sizes, 'body');
+    line-height: map-get($line-heights, 'body');
+  }
+
+  &--small {
+    font-size: map-get($font-sizes, 'small');
+    line-height: map-get($line-heights, 'small');
+  }
+
+  // Weights
+  &--light { font-weight: map-get($font-weights, 'light'); }
+  &--regular { font-weight: map-get($font-weights, 'regular'); }
+  &--medium { font-weight: map-get($font-weights, 'medium'); }
+  &--semibold { font-weight: map-get($font-weights, 'semibold'); }
+  &--bold { font-weight: map-get($font-weights, 'bold'); }
+}

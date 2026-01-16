@@ -1,0 +1,84 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.badge {
+  @include badge-base;
+
+  // Sizes
+  &--sm {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  &--md {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  &--lg {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  // Category Badge Variants (görseldeki gibi)
+  &--primary {
+    background-color: #e8f4fd;
+    color: #1e5aa8;
+  }
+
+  &--success {
+    background-color: #e6f7ed;
+    color: #16a34a;
+  }
+
+  &--warning {
+    background-color: #fef3e6;
+    color: #ea580c;
+  }
+
+  &--error {
+    background-color: #fde8e8;
+    color: #dc2626;
+  }
+
+  &--info {
+    background-color: #ede9fe;
+    color: #7c3aed;
+  }
+
+  &--gray {
+    background-color: color('gray-100');
+    color: color('gray-600');
+  }
+
+  // Solid variants (COLOR section)
+  &--success-solid {
+    background-color: #22c55e;
+    color: white;
+  }
+
+  &--error-solid {
+    background-color: #ef4444;
+    color: white;
+  }
+
+  &--warning-solid {
+    background-color: #f97316;
+    color: white;
+  }
+
+  &--primary-solid {
+    background-color: #3b82f6;
+    color: white;
+  }
+
+  &--dark {
+    background-color: #374151;
+    color: white;
+  }
+
+  &--teal {
+    background-color: #62e3e3;
+    color: #0d4f4f;
+  }
+}

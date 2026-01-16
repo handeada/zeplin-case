@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s /b \"c:\\\\Users\\\\User\\\\react-app\\\\src\\\\assets\\\\figma\")",
+      "Skill(figma:implement-design)",
+      "Skill(figma:implement-design:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)"
+    ]
+  }
+}

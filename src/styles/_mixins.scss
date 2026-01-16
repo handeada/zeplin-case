@@ -1,0 +1,116 @@
+// ===========================================
+// Mixins - Zeplin Case UI Kit
+// ===========================================
+
+@use 'variables' as *;
+
+// Flexbox mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// Typography mixins
+@mixin heading($size) {
+  font-family: $font-family-base;
+  font-size: map-get($font-sizes, $size);
+  line-height: map-get($line-heights, $size);
+  font-weight: map-get($font-weights, 'semibold');
+  color: color('text-primary');
+}
+
+@mixin body-text {
+  font-family: $font-family-base;
+  font-size: map-get($font-sizes, 'body');
+  line-height: map-get($line-heights, 'body');
+  font-weight: map-get($font-weights, 'regular');
+  color: color('text-primary');
+}
+
+// Button base mixin
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: space('2');
+  font-family: $font-family-base;
+  font-size: map-get($font-sizes, 'body');
+  font-weight: map-get($font-weights, 'medium');
+  border: none;
+  border-radius: radius('md');
+  cursor: pointer;
+  transition: all $transition-base;
+  text-decoration: none;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Card mixin
+@mixin card-base {
+  background: color('bg-white');
+  border-radius: radius('xl');
+  box-shadow: map-get($shadows, 'md');
+  border: 1px solid color('gray-200');
+}
+
+// Badge mixin
+@mixin badge-base {
+  display: inline-flex;
+  align-items: center;
+  padding: space('1') space('2');
+  font-family: $font-family-base;
+  font-size: map-get($font-sizes, 'small');
+  font-weight: map-get($font-weights, 'medium');
+  border-radius: radius('full');
+  white-space: nowrap;
+}
+
+// Focus ring
+@mixin focus-ring {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 90, 168, 0.3);
+  }
+}
+
+// Truncate text
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Responsive breakpoints
+@mixin mobile {
+  @media (max-width: 639px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 640px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
