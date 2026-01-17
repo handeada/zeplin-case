@@ -4,60 +4,66 @@
 .toggle-group {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0px 0px 1px 0px rgba(96, 96, 96, 0.1);
 
   // Sizes
   &--sm {
     .toggle-group__button {
-      padding: 6px 12px;
-      font-size: 12px;
+      padding: 4px 10px;
+      font-size: 13px;
     }
   }
 
   &--md {
     .toggle-group__button {
-      padding: 8px 16px;
-      font-size: 13px;
+      padding: 4px 10px;
+      font-size: 15px;
     }
   }
 
   &--lg {
     .toggle-group__button {
-      padding: 10px 20px;
-      font-size: 14px;
+      padding: 8px 16px;
+      font-size: 16px;
     }
   }
 
-  // Button
+  // Button (D2C style)
   &__button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 10px;
     font-family: $font-family-base;
     font-weight: 500;
-    font-size: 13px;
-    color: color('gray-500');
-    background-color: transparent;
+    font-size: 15px;
+    line-height: 20px;
+    color: color('text-primary'); // #0d0c22
+    background-color: rgba(13, 12, 34, 0.05); // inactive bg
     border: none;
-    border-radius: 20px;
-    padding: 8px 16px;
+    border-radius: 25px;
+    padding: 4px 10px;
+    height: 37px;
     cursor: pointer;
     transition: all 150ms ease;
     white-space: nowrap;
 
     &:hover:not(:disabled):not(.toggle-group__button--active) {
-      color: color('gray-700');
-      background-color: color('gray-100');
+      background-color: rgba(13, 12, 34, 0.1);
     }
 
     &:focus {
       outline: none;
     }
 
+    // Active state (D2C: primary solid)
     &--active {
-      background-color: color('primary-light');
-      color: color('primary');
+      background-color: color('primary'); // #273d89
+      color: white;
       font-weight: 500;
     }
 

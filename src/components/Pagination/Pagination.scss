@@ -4,55 +4,61 @@
 .pagination {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 10px;
 
   &__pages {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 10px;
   }
 
+  // D2C Style: Pill-shaped pagination with border
   &__button {
     @include flex-center;
-    min-width: 32px;
-    height: 32px;
-    padding: 0 8px;
+    gap: 10px;
+    min-width: 55px;
+    height: 55px;
+    padding: 17px 24px 17px 15px;
     font-family: $font-family-base;
-    font-weight: 500;
-    font-size: 14px;
-    color: color('gray-500');
+    font-weight: 400;
+    font-size: 16px;
+    color: #2a2b31; // D2C text color
     background-color: transparent;
-    border: none;
-    border-radius: 8px;
+    border: 1px solid color('gray-300'); // #acb1c6
+    border-radius: 50px;
     cursor: pointer;
     transition: all 150ms ease;
 
     &:hover:not(:disabled):not(.pagination__button--active) {
-      background-color: color('gray-100');
-      color: color('gray-700');
+      background-color: color('gray-50');
+      border-color: color('primary');
+      color: color('primary');
     }
 
     &:focus {
       outline: none;
     }
 
+    // Active state (D2C: #112053 dark primary)
     &--active {
-      background-color: color('primary');
+      background-color: color('primary-dark'); // #112053
+      border-color: color('primary-dark');
       color: white;
     }
 
     &--nav {
-      color: color('gray-400');
-      min-width: 32px;
+      color: color('text-secondary');
+      min-width: 55px;
+      gap: 22px;
 
       &:hover:not(:disabled) {
-        color: color('gray-600');
-        background-color: color('gray-100');
+        color: color('primary');
+        border-color: color('primary');
       }
 
       svg {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
       }
     }
 
@@ -67,7 +73,17 @@
     align-items: center;
     justify-content: center;
     min-width: 32px;
-    color: color('gray-400');
-    font-size: 14px;
+    color: color('gray-300');
+    font-size: 16px;
+  }
+
+  // Compact variant (smaller, for less space)
+  &--compact {
+    .pagination__button {
+      min-width: 40px;
+      height: 40px;
+      padding: 10px 16px;
+      font-size: 14px;
+    }
   }
 }

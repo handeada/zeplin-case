@@ -2,45 +2,64 @@
 // Design Tokens - Zeplin Case UI Kit
 // ===========================================
 
-// Color Palette
+// Color Palette - Extracted from Figma D2C Export
 $colors: (
-  // Primary Blues
-  'primary': #1e5aa8,
-  'primary-light': #e8f0f8,
-  'primary-lighter': #f5f8fc,
-  'primary-dark': #164785,
+  // Primary Blues (from D2C: rgba(39, 61, 137, 1))
+  'primary': #273d89,
+  'primary-light': #ebefff,
+  'primary-lighter': #f6f8ff,
+  'primary-dark': #112053,
+  'primary-hover': rgba(39, 61, 137, 0.15),
+
+  // Secondary (Green/Olive from D2C: rgba(168, 185, 94, 1))
+  'secondary': #a8b95e,
+  'secondary-dark': #2b3016,
 
   // Status Colors
-  'success': #22c55e,
-  'success-light': #dcfce7,
-  'warning': #f97316,
-  'warning-light': #ffedd5,
-  'error': #ef4444,
+  'success': #a8b95e,
+  'success-light': #fbf6e3,
+  'warning': #de8536,
+  'warning-light': #fff4eb,
+  'error': #db0d15,
   'error-light': #fee2e2,
-  'info': #3b82f6,
-  'info-light': #dbeafe,
+  'info': #00c3d0,
+  'info-light': #c6ecff,
 
-  // Neutral Colors
-  'gray-50': #f9fafb,
-  'gray-100': #f3f4f6,
-  'gray-200': #e5e7eb,
-  'gray-300': #d1d5db,
-  'gray-400': #9ca3af,
-  'gray-500': #6b7280,
-  'gray-600': #4b5563,
-  'gray-700': #374151,
-  'gray-800': #1f2937,
-  'gray-900': #111827,
+  // Neutral Colors (from D2C)
+  'gray-50': #f9f9f9,
+  'gray-100': #f6f8ff,
+  'gray-200': #dedede,
+  'gray-300': #acb1c6,
+  'gray-400': #676a73,
+  'gray-500': #2a2c31,
+  'gray-600': #174162,
+  'gray-700': #0d0c22,
+  'gray-800': #081542,
+  'gray-900': #0a1642,
 
   // Text Colors
-  'text-primary': #1f2937,
-  'text-secondary': #6b7280,
-  'text-muted': #9ca3af,
+  'text-primary': #0d0c22,
+  'text-secondary': #676a73,
+  'text-muted': #acb1c6,
+  'text-link': #273d89,
 
   // Background Colors
   'bg-white': #ffffff,
-  'bg-light': #f9fafb,
-  'bg-dark': #1f2937,
+  'bg-light': #f9f9f9,
+  'bg-dark': #081542,
+
+  // Badge Colors (from D2C COLOR section)
+  'badge-primary': #273d89,
+  'badge-secondary': #a8b95e,
+  'badge-dark': #081542,
+  'badge-cream': #fbf6e3,
+  'badge-error': #db0d15,
+  'badge-warning': #de8536,
+  'badge-teal': #00c3d0,
+  'badge-gray': #676a73,
+  'badge-lightblue': #c6ecff,
+  'badge-charcoal': #2a2c31,
+  'badge-silver': #acb1c6,
 );
 
 // Typography

@@ -23,95 +23,198 @@
     border-radius: 8px;
   }
 
-  // Primary variant
-  &--primary {
-    background-color: #1e5aa8;
+  // ===========================================
+  // Primary Button States (görsel sırasına göre)
+  // 1. Default - Outline style
+  // 2. Hover - Solid primary
+  // 3. Active - Light bg with border
+  // 4. Disabled - Gray muted
+  // ===========================================
+
+  // Primary Default (Outline - 1st in image)
+  &--primary-default {
+    background-color: transparent;
+    color: color('primary');
+    border: 1px solid color('primary');
+    border-radius: 8px;
+    padding: 17px 21px;
+    gap: 10px;
+  }
+
+  // Primary Hover (Solid - 2nd in image)
+  &--primary-hover {
+    background-color: color('primary');
     color: white;
+    border: 1px solid color('primary');
+    border-radius: 8px;
+    padding: 17px 21px;
+    gap: 10px;
+  }
+
+  // Primary Active (Light bg - 3rd in image)
+  &--primary-active {
+    background-color: color('primary-light'); // #ebefff
+    color: color('primary');
+    border: 1px solid color('primary');
+    border-radius: 8px;
+    padding: 17px 21px;
+    gap: 10px;
+  }
+
+  // Primary Disabled (Gray - 4th in image)
+  &--primary-disabled {
+    background-color: #dedede;
+    color: #b3b3b3;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    padding: 17px 21px;
+    gap: 10px;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+
+  // Primary variant (with real hover/active states)
+  &--primary {
+    background-color: transparent;
+    color: color('primary');
+    border: 1px solid color('primary');
+    border-radius: 8px;
+    padding: 17px 21px;
+    gap: 10px;
 
     &:hover:not(:disabled) {
-      background-color: #164785;
+      background-color: color('primary');
+      color: white;
     }
 
     &:active:not(:disabled) {
-      transform: scale(0.98);
+      background-color: color('primary-light');
+      color: color('primary');
+    }
+
+    &:disabled {
+      background-color: #dedede;
+      color: #b3b3b3;
+      border-color: #dedede;
+      cursor: not-allowed;
     }
   }
 
-  // Secondary variant
+  // Secondary variant (D2C Green: #a8b95e)
   &--secondary {
-    background-color: #e8f4fd;
-    color: #1e5aa8;
+    background-color: transparent;
+    color: color('secondary');
+    border: 1px solid color('secondary');
+    border-radius: 8px;
+    padding: 17px 21px;
 
     &:hover:not(:disabled) {
-      background-color: #d4e8f8;
+      background-color: color('secondary');
+      color: white;
+    }
+
+    &:active:not(:disabled) {
+      background-color: color('success-light');
+      color: color('secondary');
+    }
+
+    &:disabled {
+      background-color: #dedede;
+      color: #b3b3b3;
+      border-color: #dedede;
     }
   }
 
   // Outline variant
   &--outline {
     background-color: transparent;
-    color: #6b7280;
-    border: 1px solid #d1d5db;
+    color: color('text-secondary');
+    border: 1px solid color('gray-300');
+    border-radius: 8px;
 
     &:hover:not(:disabled) {
-      background-color: #f3f4f6;
-      border-color: #9ca3af;
+      background-color: color('gray-50');
+      border-color: color('primary');
+      color: color('primary');
     }
   }
 
   // Ghost variant (icon buttons)
   &--ghost {
     background-color: transparent;
-    color: #6b7280;
+    color: color('text-secondary');
     padding: 8px;
     min-width: 36px;
     min-height: 36px;
     border-radius: 8px;
 
     &:hover:not(:disabled) {
-      background-color: #f3f4f6;
-      color: #374151;
+      background-color: color('gray-50');
+      color: color('text-primary');
     }
   }
 
   // Icon-only variant
   &--icon {
     background-color: transparent;
-    color: #9ca3af;
+    color: color('gray-300');
     padding: 8px;
     min-width: 32px;
     min-height: 32px;
     border-radius: 50%;
 
     &:hover:not(:disabled) {
-      background-color: #f3f4f6;
-      color: #6b7280;
+      background-color: color('gray-50');
+      color: color('text-secondary');
     }
   }
 
   // Social button variants
   &--social {
     background-color: transparent;
-    color: #6b7280;
+    color: color('text-secondary');
     padding: 8px;
     min-width: 36px;
     min-height: 36px;
     border-radius: 50%;
-    border: 1px solid #e5e7eb;
+    border: 1px solid color('gray-200');
 
     &:hover:not(:disabled) {
-      background-color: #f3f4f6;
-      color: #374151;
+      background-color: color('gray-50');
+      color: color('text-primary');
     }
   }
 
-  // Success variant
+  // Success variant (same as secondary)
   &--success {
-    background-color: #22c55e;
+    background-color: color('success');
     color: white;
+    border-radius: 50px;
 
     &:hover:not(:disabled) {
-      background-color: #16a34a;
+      background-color: color('secondary-dark');
+    }
+  }
+
+  // Error variant
+  &--error {
+    background-color: color('error');
+    color: white;
+    border-radius: 50px;
+
+    &:hover:not(:disabled) {
+      background-color: #9d0006;
+    }
+  }
+
+  // Error Hover
+  &--error-hover {
+    background-color: #9d0006;
+    color: white;
+    border-radius: 50px;
+
+    &:hover:not(:disabled) {
+      background-color: color('error');
     }
   }
 

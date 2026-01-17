@@ -58,7 +58,7 @@ const CopyIcon = () => (
 );
 
 const HourglassIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e5aa8" strokeWidth="2">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#273d89" strokeWidth="2">
     <path d="M5 22h14M5 2h14M17 22v-4.172a2 2 0 00-.586-1.414L12 12l-4.414 4.414A2 2 0 007 17.828V22M7 2v4.172a2 2 0 00.586 1.414L12 12l4.414-4.414A2 2 0 0017 6.172V2"/>
   </svg>
 );
@@ -110,22 +110,23 @@ function App() {
         {/* LEFT COLUMN */}
         <div className="lg:col-span-2 space-y-10">
 
-          {/* COLOR SECTION */}
+          {/* COLOR SECTION - D2C Colors */}
           <section>
-            <Typography variant="h4" weight="bold" className="mb-4 text-gray-400">COLOR</Typography>
+            <Typography variant="h4" weight="bold" className="mb-4" style={{ color: '#676a73' }}>COLOR</Typography>
             <div className="flex flex-wrap gap-2 mb-2">
-              <Badge variant="success-solid">Success</Badge>
-              <Badge variant="error-solid">Error</Badge>
-              <Badge variant="warning-solid">Warning</Badge>
-              <Badge variant="primary-solid">Primary</Badge>
-              <Badge variant="dark">Stroke Medium</Badge>
-              <Badge variant="teal">#62E3E3</Badge>
+              <Badge variant="primary">#273d89</Badge>
+              <Badge variant="secondary">#a8b95e</Badge>
+              <Badge variant="dark">#081542</Badge>
+              <Badge variant="cream">#fbf6e3</Badge>
+              <Badge variant="error">#db0d15</Badge>
+              <Badge variant="warning">#de8536</Badge>
             </div>
             <div className="flex flex-wrap gap-2">
-              <Badge variant="success">Success Light</Badge>
-              <Badge variant="error">Error Light</Badge>
-              <Badge variant="warning">Warning Light</Badge>
-              <Badge variant="primary">Primary Light</Badge>
+              <Badge variant="teal">#00c3d0</Badge>
+              <Badge variant="gray">#676a73</Badge>
+              <Badge variant="lightblue">#c6ecff</Badge>
+              <Badge variant="charcoal">#2a2c31</Badge>
+              <Badge variant="silver">#acb1c6</Badge>
             </div>
           </section>
 
@@ -149,34 +150,34 @@ function App() {
 
           {/* TITLE / TYPOGRAPHY SECTION */}
           <section>
-            <Typography variant="h4" weight="bold" className="mb-4" style={{ color: '#1e5aa8' }}>TITLE</Typography>
+            <Typography variant="h4" weight="bold" className="mb-4" style={{ color: '#273d89' }}>TITLE</Typography>
             <div className="mb-4">
               <ToggleButtonGroup options={titleToggleOptions} />
             </div>
             <div className="space-y-3">
               <div className="flex items-baseline gap-4">
-                <span className="w-8 text-sm font-semibold" style={{ color: '#1e5aa8' }}>H1</span>
+                <span className="w-8 text-sm font-semibold" style={{ color: '#273d89' }}>H1</span>
                 <Typography variant="h1">32 px font-size / 38 line height</Typography>
               </div>
               <div className="flex items-baseline gap-4">
-                <span className="w-8 text-sm font-semibold" style={{ color: '#1e5aa8' }}>H2</span>
+                <span className="w-8 text-sm font-semibold" style={{ color: '#273d89' }}>H2</span>
                 <Typography variant="h2">28 px font-size / 36 line height</Typography>
               </div>
               <div className="flex items-baseline gap-4">
-                <span className="w-8 text-sm font-semibold" style={{ color: '#1e5aa8' }}>H3</span>
+                <span className="w-8 text-sm font-semibold" style={{ color: '#273d89' }}>H3</span>
                 <Typography variant="h3">26 px font-size / 32 line height</Typography>
               </div>
               <div className="flex items-baseline gap-4">
-                <span className="w-8 text-sm font-semibold" style={{ color: '#1e5aa8' }}>H4</span>
+                <span className="w-8 text-sm font-semibold" style={{ color: '#273d89' }}>H4</span>
                 <Typography variant="h4">24 px font-size / 30 line height</Typography>
               </div>
               <div className="flex items-baseline gap-4">
-                <span className="w-8 text-sm text-gray-400">H5</span>
-                <Typography variant="h5" className="text-gray-400">22 px font-size / 28 line height</Typography>
+                <span className="w-8 text-sm" style={{ color: '#a8b95e' }}>H5</span>
+                <Typography variant="h5" style={{ color: '#2a2c31' }}>22 px font-size / 28 line height</Typography>
               </div>
               <div className="flex items-baseline gap-4">
-                <span className="w-8 text-sm text-gray-400">H6</span>
-                <Typography variant="h6" className="text-gray-400">20 px font-size / 26 line height</Typography>
+                <span className="w-8 text-sm" style={{ color: '#676a73' }}>H6</span>
+                <Typography variant="h6" style={{ color: '#676a73' }}>20 px font-size / 26 line height</Typography>
               </div>
             </div>
           </section>
@@ -185,50 +186,82 @@ function App() {
           <section>
             <Typography variant="h4" weight="bold" className="mb-4">Category Badge</Typography>
             <div className="flex flex-wrap gap-2">
-              <Badge variant="primary" size="sm">Araştırma Makalesi</Badge>
-              <Badge variant="success" size="sm">Deneme</Badge>
+              <Badge variant="primary-light" size="sm">Araştırma Makalesi</Badge>
+              <Badge variant="success-light" size="sm">Deneme</Badge>
               <Badge variant="warning" size="sm">İnceleme Makalesi</Badge>
-              <Badge variant="info" size="sm">İnceleme Makalesi</Badge>
+              <Badge variant="teal" size="sm">Çeviri Makalesi</Badge>
             </div>
           </section>
 
           {/* PAGINATION SECTION */}
           <section>
             <Typography variant="h4" weight="bold" className="mb-4">Pagination</Typography>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-wrap">
               <Pagination
                 currentPage={currentPage}
                 totalPages={99}
                 onPageChange={setCurrentPage}
                 showFirstLast={false}
               />
-              <div className="flex items-center gap-1 ml-4">
-                <span className="w-6 h-6 rounded bg-primary-light flex items-center justify-center">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1e5aa8" strokeWidth="2">
-                    <path d="M15 19l-7-7 7-7"/>
-                  </svg>
-                </span>
-                <span className="w-6 h-6 rounded bg-primary-light flex items-center justify-center">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1e5aa8" strokeWidth="2">
-                    <path d="M9 5l7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
             </div>
           </section>
 
-          {/* BUTTONS SECTION */}
+          {/* BUTTONS SECTION - D2C Style */}
           <section>
             <Typography variant="h4" weight="bold" className="mb-4">Buttons</Typography>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <Badge variant="gray" size="sm">Sayfa: 10-59</Badge>
-                <span className="text-sm text-gray-500">Yazar Adı Soyadı</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Button variant="icon"><ShareIcon /></Button>
-                <Button variant="icon"><BookmarkIcon /></Button>
-              </div>
+            <div className="flex flex-wrap gap-3">
+              <Button variant="primary">
+                <span className="btn__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </span>
+                Görüntüle
+              </Button>
+              <Button variant="primary-hover">
+                <span className="btn__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </span>
+                Hover
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-3 mt-3">
+              <Button variant="secondary">
+                <span className="btn__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </span>
+                Secondary
+              </Button>
+              <Button variant="secondary-hover">
+                <span className="btn__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </span>
+                Hover
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-3 mt-3">
+              <Button variant="error">
+                <span className="btn__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </span>
+                Error
+              </Button>
+              <Button variant="error-hover">
+                <span className="btn__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                </span>
+                Hover
+              </Button>
             </div>
           </section>
 
@@ -240,7 +273,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm hover:underline"
-              style={{ color: '#1e5aa8' }}
+              style={{ color: '#273d89' }}
             >
               https://fonts.google.com/specimen/Inter?query=inter
             </a>
@@ -335,7 +368,7 @@ function App() {
                 <span className="text-xl">🍪</span>
                 <div>
                   <Typography variant="small" className="text-gray-700 leading-relaxed">
-                    We use cookies to ensure that we give you the best experience on our website. <a href="#" className="hover:underline" style={{ color: '#1e5aa8' }}>Read cookies policies</a>.
+                    We use cookies to ensure that we give you the best experience on our website. <a href="#" className="hover:underline" style={{ color: '#273d89' }}>Read cookies policies</a>.
                   </Typography>
                 </div>
               </div>

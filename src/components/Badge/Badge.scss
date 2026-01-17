@@ -20,65 +20,70 @@
     font-size: 14px;
   }
 
-  // Category Badge Variants (görseldeki gibi)
+  // D2C COLOR Section - Solid Badges
   &--primary {
-    background-color: #e8f4fd;
-    color: #1e5aa8;
-  }
-
-  &--success {
-    background-color: #e6f7ed;
-    color: #16a34a;
-  }
-
-  &--warning {
-    background-color: #fef3e6;
-    color: #ea580c;
-  }
-
-  &--error {
-    background-color: #fde8e8;
-    color: #dc2626;
-  }
-
-  &--info {
-    background-color: #ede9fe;
-    color: #7c3aed;
-  }
-
-  &--gray {
-    background-color: color('gray-100');
-    color: color('gray-600');
-  }
-
-  // Solid variants (COLOR section)
-  &--success-solid {
-    background-color: #22c55e;
+    background-color: color('badge-primary'); // #273d89
     color: white;
   }
 
-  &--error-solid {
-    background-color: #ef4444;
-    color: white;
-  }
-
-  &--warning-solid {
-    background-color: #f97316;
-    color: white;
-  }
-
-  &--primary-solid {
-    background-color: #3b82f6;
+  &--secondary {
+    background-color: color('badge-secondary'); // #a8b95e (yeşil/zeytin)
     color: white;
   }
 
   &--dark {
-    background-color: #374151;
+    background-color: color('badge-dark'); // #081542
+    color: white;
+  }
+
+  &--cream {
+    background-color: color('badge-cream'); // #fbf6e3
+    color: #000;
+  }
+
+  &--error {
+    background-color: color('badge-error'); // #db0d15
+    color: white;
+  }
+
+  &--warning {
+    background-color: color('badge-warning'); // #de8536 (turuncu)
     color: white;
   }
 
   &--teal {
-    background-color: #62e3e3;
-    color: #0d4f4f;
+    background-color: color('badge-teal'); // #00c3d0
+    color: white;
+  }
+
+  &--gray {
+    background-color: color('badge-gray'); // #676a73
+    color: white;
+  }
+
+  &--lightblue {
+    background-color: color('badge-lightblue'); // #c6ecff
+    color: #4d4d4d;
+  }
+
+  &--charcoal {
+    background-color: color('badge-charcoal'); // #2a2c31
+    color: white;
+  }
+
+  &--silver {
+    background-color: color('badge-silver'); // #acb1c6
+    color: white;
+  }
+
+  // Light variants (for text on light bg)
+  &--primary-light {
+    background-color: color('primary-light');
+    color: color('primary');
+  }
+
+  &--success-light {
+    background-color: color('success-light');
+    color: color('secondary');
   }
 }
