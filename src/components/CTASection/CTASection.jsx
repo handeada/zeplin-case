@@ -2,6 +2,7 @@ import Button from '../Button';
 import Icon from '../Icon';
 import PostCard from '../PostCard';
 import './CTASection.scss';
+import magazineImage from '../../assets/images/image 1.png';
 
 const CTASection = () => {
   const articles = [
@@ -46,7 +47,7 @@ const CTASection = () => {
           {/* Magazine Card */}
           <div className="cta-section__magazine">
             <div className="cta-section__magazine-card">
-              <img src="/src/assets/images/image-1.png" alt="Profuture Teknoloji Dergisi" />
+              <img src={magazineImage} alt="Profuture Teknoloji Dergisi" />
               <div className="cta-section__magazine-actions">
                 <Button variant="icon" size="md">
                   <Icon name="download" size={20} />
