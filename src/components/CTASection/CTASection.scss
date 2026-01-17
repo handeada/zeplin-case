@@ -2,8 +2,8 @@
 @use '../../styles/mixins' as *;
 
 .cta-section {
-  padding: space('8') 0;
-  background-color: color('bg-white');
+  padding: space('10') 0;
+  background-color: color('bg-light');
 
   .container {
     width: 100%;
@@ -14,5 +14,74 @@
     @media (max-width: 768px) {
       padding: 0 space('4');
     }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    gap: space('8');
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      gap: space('6');
+    }
+  }
+
+  // Magazine Card
+  &__magazine-card {
+    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+    border-radius: radius('2xl');
+    padding: space('6');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: space('4');
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: radius('lg');
+      box-shadow: map-get($shadows, 'xl');
+    }
+  }
+
+  &__magazine-actions {
+    display: flex;
+    gap: space('2');
+    justify-content: center;
+  }
+
+  // Articles Section
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: space('6');
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: space('3');
+    }
+  }
+
+  &__subtitle {
+    font-size: map-get($font-sizes, 'body');
+    color: color('text-secondary');
+    margin: 0 0 space('1') 0;
+  }
+
+  &__title {
+    font-size: map-get($font-sizes, 'h2');
+    font-weight: map-get($font-weights, 'bold');
+    color: color('error');
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: space('3');
   }
 }
