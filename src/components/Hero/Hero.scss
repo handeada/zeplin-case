@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.hero {
+  background-color: color('bg-light');
+  padding: space('12') 0;
+
+  @media (max-width: 768px) {
+    padding: space('8') 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 space('6');
+
+    @media (max-width: 768px) {
+      padding: 0 space('4');
+    }
+  }
+}

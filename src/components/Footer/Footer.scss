@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+  background-color: color('gray-800');
+  color: color('bg-white');
+  padding: space('10') 0 space('6') 0;
+
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 space('6');
+
+    @media (max-width: 768px) {
+      padding: 0 space('4');
+    }
+  }
+}

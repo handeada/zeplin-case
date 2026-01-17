@@ -1,0 +1,18 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.cta-section {
+  padding: space('8') 0;
+  background-color: color('bg-white');
+
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 space('6');
+
+    @media (max-width: 768px) {
+      padding: 0 space('4');
+    }
+  }
+}
