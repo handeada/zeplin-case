@@ -7,6 +7,7 @@ import {
   Card,
   ToggleButtonGroup,
   Pagination,
+  Icon,
 } from './components';
 
 // Icons
@@ -112,7 +113,7 @@ function App() {
 
           {/* COLOR SECTION - D2C Colors */}
           <section>
-            <Typography variant="h4" weight="bold" className="mb-4" style={{ color: '#676a73' }}>COLOR</Typography>
+            <Typography variant="h4" weight="bold" className="mb-4" style={{ color: '#676a73' }}>Color</Typography>
             <div className="flex flex-wrap gap-2 mb-2">
               <Badge variant="primary">#273d89</Badge>
               <Badge variant="secondary">#a8b95e</Badge>
@@ -130,16 +131,137 @@ function App() {
             </div>
           </section>
 
+          {/* IKONS SECTION */}
+          <section>
+            <Typography variant="h4" weight="bold" className="mb-4">Ikons</Typography>
+
+            {/* Row 1 - Social & Navigation */}
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <Icon name="x" size={20} />
+              <Icon name="linkedin" size={20} />
+              <Icon name="facebook" size={20} />
+              <Icon name="instagram" size={20} />
+              <Icon name="youtube" size={20} />
+              <span className="w-2" />
+              <Icon name="arrowUp" size={20} />
+              <Icon name="arrowDown" size={20} />
+              <Icon name="arrowLeft" size={20} />
+              <Icon name="arrowRight" size={20} />
+              <Icon name="arrowUpRight" size={20} />
+              <Icon name="arrowDownLeft" size={20} />
+              <Icon name="chevronUp" size={20} />
+              <Icon name="chevronDown" size={20} />
+              <Icon name="chevronLeft" size={20} />
+              <Icon name="chevronRight" size={20} />
+            </div>
+
+            {/* Row 2 - Utility */}
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <Icon name="home" size={20} />
+              <Icon name="search" size={20} />
+              <Icon name="grid" size={20} />
+              <Icon name="menu" size={20} />
+              <Icon name="settings" size={20} />
+              <Icon name="filter" size={20} />
+              <Icon name="bookmark" size={20} />
+              <Icon name="share" size={20} />
+              <Icon name="link" size={20} />
+              <Icon name="externalLink" size={20} />
+              <Icon name="copy" size={20} />
+              <Icon name="edit" size={20} />
+              <Icon name="trash" size={20} />
+              <Icon name="refresh" size={20} />
+            </div>
+
+            {/* Row 3 - Status & Info */}
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <Icon name="info" size={20} />
+              <Icon name="check" size={20} />
+              <Icon name="error" size={20} />
+              <Icon name="warning" size={20} />
+              <Icon name="eye" size={20} />
+              <Icon name="eyeOff" size={20} />
+              <Icon name="lock" size={20} />
+              <Icon name="unlock" size={20} />
+              <Icon name="bell" size={20} />
+              <Icon name="heart" size={20} />
+              <Icon name="star" size={20} />
+              <Icon name="zap" size={20} />
+            </div>
+
+            {/* Row 4 - Document & File */}
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <Icon name="file" size={20} />
+              <Icon name="folder" size={20} />
+              <Icon name="pdf" size={20} />
+              <Icon name="download" size={20} />
+              <Icon name="upload" size={20} />
+              <Icon name="image" size={20} />
+              <Icon name="video" size={20} />
+              <Icon name="printer" size={20} />
+              <Icon name="cloud" size={20} />
+              <Icon name="book" size={20} />
+            </div>
+
+            {/* Row 5 - Business & Communication */}
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <Icon name="calendar" size={20} />
+              <Icon name="clock" size={20} />
+              <Icon name="location" size={20} />
+              <Icon name="message" size={20} />
+              <Icon name="email" size={20} />
+              <Icon name="phone" size={20} />
+              <Icon name="user" size={20} />
+              <Icon name="users" size={20} />
+              <Icon name="author" size={20} />
+              <Icon name="briefcase" size={20} />
+              <Icon name="globe" size={20} />
+            </div>
+
+            {/* Row 6 - Charts & Analytics */}
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <Icon name="chartBar" size={20} />
+              <Icon name="chartLine" size={20} />
+              <Icon name="chartPie" size={20} />
+              <Icon name="dashboard" size={20} />
+              <Icon name="target" size={20} />
+              <Icon name="trophy" size={20} />
+              <Icon name="graduation" size={20} />
+              <Icon name="promotion" size={20} />
+            </div>
+
+            {/* Row 7 - Misc */}
+            <div className="flex flex-wrap items-center gap-3">
+              <Icon name="cilt" size={20} />
+              <Icon name="number" size={20} />
+              <Icon name="sun" size={20} />
+              <Icon name="moon" size={20} />
+              <Icon name="volume" size={20} />
+              <Icon name="plus" size={20} />
+              <Icon name="minus" size={20} />
+              <Icon name="close" size={20} />
+            </div>
+          </section>
+
           {/* TOGGLE BUTTON GROUP SECTION */}
           <section>
             <Typography variant="h4" weight="bold" className="mb-4">ToggleButtonGroup</Typography>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <span className="text-xs text-gray-400 w-12">Default</span>
-                <span className="text-xs text-gray-400 w-12">Hover</span>
-                <span className="text-xs text-gray-400 w-12">Active</span>
-                <span className="text-xs text-gray-400 w-12">Inactive</span>
+            <div className="space-y-4">
+              {/* Button State Labels */}
+              <div className="flex items-center gap-6">
+                <span className="text-xs text-gray-400 w-16 text-center">Default</span>
+                <span className="text-xs text-gray-400 w-16 text-center">Hover</span>
+                <span className="text-xs text-gray-400 w-16 text-center">Active</span>
+                <span className="text-xs text-gray-400 w-16 text-center">Disabled</span>
               </div>
+              {/* Button State Showcase */}
+              <div className="flex items-center gap-3">
+                <Button variant="primary-default" size="md">Button</Button>
+                <Button variant="primary-hover" size="md">Button</Button>
+                <Button variant="primary-active" size="md">Button</Button>
+                <Button variant="primary-disabled" size="md" disabled>Button</Button>
+              </div>
+              {/* Toggle Group Example */}
               <ToggleButtonGroup
                 options={toggleOptions}
                 value={selectedToggle}
