@@ -13,7 +13,12 @@
       "mcp__plugin_figma_figma__get_screenshot",
       "mcp__plugin_figma_figma__whoami",
       "Bash(echo:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(move Badge ui )",
+      "Bash(move Button ui )",
+      "Bash(move Icon ui )",
+      "Bash(move Typography ui )",
+      "Bash(move:*)"
     ]
   }
 }

@@ -1,4 +1,4 @@
-import Icon from '../Icon/Icon';
+import { Icon } from '../ui';
 import './Footer.scss';
 
 const Footer = () => {

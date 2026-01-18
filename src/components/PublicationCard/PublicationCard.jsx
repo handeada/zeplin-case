@@ -1,8 +1,5 @@
 import './PublicationCard.scss';
-import Badge from '../Badge/Badge';
-import Icon from '../Icon/Icon';
-import Button from '../Button/Button';
-import Typography from '../Typography/Typography';
+import { Badge, Icon, Button, Typography } from '../ui';
 
 const PublicationCard = ({
   image,

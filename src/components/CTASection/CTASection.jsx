@@ -1,5 +1,4 @@
-import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
+import { Button, Icon } from '../ui';
 import PostCard from '../PostCard/PostCard';
 import './CTASection.scss';
 import magazineImage from '../../assets/images/image 1.png';

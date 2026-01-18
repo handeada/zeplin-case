@@ -1,8 +1,6 @@
 import './ListingSection.scss';
 import { useRef, useState } from 'react';
-import Typography from '../Typography/Typography';
-import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
+import { Typography, Button, Icon } from '../ui';
 import PublicationCard from '../PublicationCard/PublicationCard';
 import Pagination from '../Pagination/Pagination';
 import magazineImage from '../../assets/images/1_1,6176.png';

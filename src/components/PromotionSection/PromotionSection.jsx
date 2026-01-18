@@ -1,5 +1,5 @@
 import './PromotionSection.scss';
-import Button from '../Button/Button';
+import { Button } from '../ui';
 import leftImage from '../../assets/images/ChatGPT Image 12 Oca 2026 17_22_36 1.png';
 import rightImage from '../../assets/images/Ekran Resmi 2025-12-16 18.29.30 1.png';
 import backgroundImage from '../../assets/images/Mask group.png';

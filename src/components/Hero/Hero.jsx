@@ -1,6 +1,5 @@
 import './Hero.scss';
-import Button from '../Button/Button';
-import Badge from '../Badge/Badge';
+import { Button, Badge } from '../ui';
 import slideBackground from '../../assets/images/slide 1.png';
 import magazineImage from '../../assets/images/dergison 1.png';
 
