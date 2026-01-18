@@ -2,12 +2,17 @@ import './PromotionSection.scss';
 import { Button } from '../index';
 import leftImage from '../../assets/images/ChatGPT Image 12 Oca 2026 17_22_36 1.png';
 import rightImage from '../../assets/images/Ekran Resmi 2025-12-16 18.29.30 1.png';
+import backgroundImage from '../../assets/images/Mask group.png';
 
 const PromotionSection = () => {
   return (
     <section className="promotion-section">
       <div className="container">
         <div className="promotion-section__content">
+          <div className="promotion-section__background">
+            <img src={backgroundImage} alt="" />
+          </div>
+
           <div className="promotion-section__left">
             <img src={leftImage} alt="Dergi Kapakları" />
           </div>
