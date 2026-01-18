@@ -1,0 +1,181 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.publication-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  max-width: 465px;
+  background-color: color("bg-white");
+  border: 1px solid color("gray-200");
+  border-radius: radius("3xl");
+  overflow: hidden;
+  box-shadow: map-get($shadows, "md");
+  transition: all $transition-base;
+
+  &:hover {
+    box-shadow: map-get($shadows, "lg");
+  }
+
+  // Left side - Magazine image
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: color("bg-light");
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  // Right side - Content
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: space("6");
+    gap: space("3");
+  }
+
+  // NEW badge (positioned top-right)
+  &__badge {
+    position: absolute;
+    top: space("4");
+    right: space("4");
+    text-transform: uppercase;
+    font-weight: map-get($font-weights, "bold");
+  }
+
+  // Type section (PDF icon + "Dergi")
+  &__type {
+    @include flex-start;
+    gap: space("2");
+    color: color("text-secondary");
+  }
+
+  &__type-text {
+    color: color("text-secondary");
+  }
+
+  // Title
+  &__title {
+    color: color("primary-dark");
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  // Meta information (Cilt, Sayı)
+  &__meta {
+    @include flex-start;
+    gap: space("4");
+    flex-wrap: wrap;
+  }
+
+  &__meta-item {
+    @include flex-start;
+    gap: space("1");
+    color: color("text-primary");
+
+    svg {
+      color: color("text-secondary");
+    }
+  }
+
+  // Date
+  &__date {
+    @include flex-start;
+    gap: space("1");
+    color: color("text-primary");
+
+    svg {
+      color: color("text-secondary");
+    }
+  }
+
+  // Action buttons
+  &__actions {
+    @include flex-start;
+    gap: space("2");
+    margin-top: auto;
+    padding-top: space("3");
+  }
+
+  &__action-btn {
+    min-width: 48px;
+    min-height: 48px;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: radius("full");
+    @include flex-center;
+
+    // View button (primary with icon)
+    &--view {
+      background-color: color("primary");
+      color: white;
+      border: none;
+
+      &:hover:not(:disabled) {
+        background-color: color("primary-dark");
+      }
+    }
+
+    // Download and Navigate buttons (outline)
+    &--download,
+    &--navigate {
+      background-color: transparent;
+      color: color("text-secondary");
+      border: 1px solid color("gray-300");
+
+      &:hover:not(:disabled) {
+        background-color: color("gray-50");
+        border-color: color("primary");
+        color: color("primary");
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    grid-template-columns: 200px 1fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    &__image {
+      height: 300px;
+    }
+
+    &__content {
+      padding: space("4");
+      gap: space("2");
+    }
+
+    &__badge {
+      top: space("3");
+      right: space("3");
+    }
+
+    &__actions {
+      gap: space("2");
+    }
+
+    &__action-btn {
+      min-width: 40px;
+      min-height: 40px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &__meta {
+      gap: space("3");
+    }
+  }
+}

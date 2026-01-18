@@ -7,7 +7,9 @@ import {
   ToggleButtonGroup,
   Pagination,
   Icon,
+  PublicationCard,
 } from '../../components';
+import magazineImage from '../../assets/images/1_1,6176.png';
 
 // Icons
 const ShareIcon = () => (
@@ -510,6 +512,25 @@ const ComponentLibrary = () => {
               <Button variant="icon"><CopyIcon /></Button>
             </div>
           </div>
+
+          {/* PUBLICATION CARD SECTION */}
+          <section>
+            <Typography variant="h4" weight="bold" className="mb-4" style={{ marginTop: '48px' }}>
+              Publication Card
+            </Typography>
+            <PublicationCard
+              image={magazineImage}
+              isNew={true}
+              type="Dergi"
+              title="Teknoloji ve Dijital Dergisi"
+              volume="1"
+              issue="1"
+              date="Aralık 2022"
+              onView={() => console.log('View clicked')}
+              onDownload={() => console.log('Download clicked')}
+              onNavigate={() => console.log('Navigate clicked')}
+            />
+          </section>
 
         </div>
 
