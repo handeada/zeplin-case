@@ -106,19 +106,6 @@
 
   &__card {
     flex: 0 0 auto;
-    width: 100%;
-    max-width: 600px;
-
-    @media (max-width: 1024px) {
-      max-width: 500px;
-    }
-
-    @media (max-width: 768px) {
-      max-width: 90%;
-    }
-
-    @media (max-width: 640px) {
-      max-width: 85%;
-    }
+    // PublicationCard'ın kendi width'ini kullanması için burada width belirtmiyoruz
   }
 }
