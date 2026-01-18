@@ -1,21 +1,98 @@
 import './ListingSection.scss';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Typography from '../Typography/Typography';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import PublicationCard from '../PublicationCard/PublicationCard';
 import Pagination from '../Pagination/Pagination';
+import magazineImage from '../../assets/images/1_1,6176.png';
 
-const ListingSection = ({
-  title = "Sayılar",
-  subtitle = "Dergiler",
-  publications = [],
-  onViewAll,
-  currentPage = 1,
-  totalPages = 1,
-  onPageChange
-}) => {
+const ListingSection = () => {
   const scrollContainerRef = useRef(null);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const publications = [
+    {
+      id: 1,
+      image: magazineImage,
+      isNew: true,
+      type: "Dergi",
+      title: "Teknoloji ve Dijital Dergisi",
+      volume: 1,
+      issue: 1,
+      date: "Aralık 2022",
+      onView: () => console.log("View clicked"),
+      onDownload: () => console.log("Download clicked"),
+      onNavigate: () => console.log("Navigate clicked"),
+    },
+    {
+      id: 2,
+      image: magazineImage,
+      isNew: false,
+      type: "Dergi",
+      title: "Teknoloji ve Dijital Dergisi",
+      volume: 1,
+      issue: 2,
+      date: "Ocak 2023",
+      onView: () => console.log("View clicked"),
+      onDownload: () => console.log("Download clicked"),
+      onNavigate: () => console.log("Navigate clicked"),
+    },
+    {
+      id: 3,
+      image: magazineImage,
+      isNew: false,
+      type: "Dergi",
+      title: "Teknoloji ve Dijital Dergisi",
+      volume: 1,
+      issue: 3,
+      date: "Şubat 2023",
+      onView: () => console.log("View clicked"),
+      onDownload: () => console.log("Download clicked"),
+      onNavigate: () => console.log("Navigate clicked"),
+    },
+    {
+      id: 4,
+      image: magazineImage,
+      isNew: false,
+      type: "Dergi",
+      title: "Teknoloji ve Dijital Dergisi",
+      volume: 1,
+      issue: 4,
+      date: "Mart 2023",
+      onView: () => console.log("View clicked"),
+      onDownload: () => console.log("Download clicked"),
+      onNavigate: () => console.log("Navigate clicked"),
+    },
+    {
+      id: 5,
+      image: magazineImage,
+      isNew: false,
+      type: "Dergi",
+      title: "Teknoloji ve Dijital Dergisi",
+      volume: 1,
+      issue: 5,
+      date: "Nisan 2023",
+      onView: () => console.log("View clicked"),
+      onDownload: () => console.log("Download clicked"),
+      onNavigate: () => console.log("Navigate clicked"),
+    },
+    {
+      id: 6,
+      image: magazineImage,
+      isNew: false,
+      type: "Dergi",
+      title: "Teknoloji ve Dijital Dergisi",
+      volume: 1,
+      issue: 6,
+      date: "Mayıs 2023",
+      onView: () => console.log("View clicked"),
+      onDownload: () => console.log("Download clicked"),
+      onNavigate: () => console.log("Navigate clicked"),
+    },
+  ];
+
+  const totalPages = 2;
 
   const handlePageChange = (page) => {
     if (scrollContainerRef.current) {
@@ -29,9 +106,11 @@ const ListingSection = ({
       });
     }
 
-    if (onPageChange) {
-      onPageChange(page);
-    }
+    setCurrentPage(page);
+  };
+
+  const handleViewAll = () => {
+    console.log("View all clicked");
   };
 
   return (
@@ -43,10 +122,10 @@ const ListingSection = ({
             <div className="listing-section__title-wrapper">
               <div className="listing-section__title-content">
                 <Typography variant="small" weight="regular" className="listing-section__label">
-                  {title}
+                  Sayılar
                 </Typography>
                 <Typography variant="h2" weight="bold" className="listing-section__subtitle">
-                  {subtitle}
+                  Dergiler
                 </Typography>
               </div>
 
@@ -65,7 +144,7 @@ const ListingSection = ({
           <Button
             variant="outline"
             className="listing-section__view-all"
-            onClick={onViewAll}
+            onClick={handleViewAll}
           >
             Tümünü Görüntüle
             <Icon name="arrowRight" size={20} />
