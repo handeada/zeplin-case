@@ -63,10 +63,18 @@ const Header = () => {
               </nav>
 
               <div className="header__actions">
-                <Button variant="primary" size="medium">
+                <Button
+                  variant="primary-filled"
+                  size="md"
+                  leftIcon={<Icon name="committee" size="24px" />}
+                >
                   Dergi Kurulu
                 </Button>
-                <Button variant="secondary" size="medium">
+                <Button
+                  variant="secondary-filled"
+                  size="md"
+                  leftIcon={<Icon name="authorGuide" size="24px" />}
+                >
                   Yazar Rehberi
                 </Button>
               </div>
