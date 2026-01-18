@@ -3,6 +3,7 @@ import {
   Header,
   Hero,
   CardsSection,
+  PromotionSection,
   ListingSection,
   CTASection,
   Footer,
@@ -108,6 +109,7 @@ const HomePage = () => {
       <Header />
       <Hero />
       <CardsSection />
+      <PromotionSection />
       <ListingSection
         title="Sayılar"
         subtitle="Dergiler"
