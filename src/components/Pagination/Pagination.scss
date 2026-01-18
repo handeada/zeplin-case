@@ -2,32 +2,30 @@
 @use '../../styles/mixins' as *;
 
 .pagination {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  @include flex-start;
+  gap: space('2.5');
 
   &__pages {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    @include flex-start;
+    gap: space('2.5');
   }
 
   // D2C Style: Pill-shaped pagination with border
   &__button {
     @include flex-center;
-    gap: 10px;
+    gap: space('2.5');
     min-width: 55px;
     height: 55px;
     padding: 17px 24px 17px 15px;
     font-family: $font-family-base;
-    font-weight: 400;
-    font-size: 16px;
-    color: #2a2b31; // D2C text color
+    font-weight: map-get($font-weights, 'regular');
+    font-size: map-get($font-sizes, 'md');
+    color: color('gray-500');
     background-color: transparent;
-    border: 1px solid color('gray-300'); // #acb1c6
-    border-radius: 50px;
+    border: 1px solid color('gray-300');
+    border-radius: radius('full');
     cursor: pointer;
-    transition: all 150ms ease;
+    transition: all $transition-fast;
 
     &:hover:not(:disabled):not(.pagination__button--active) {
       background-color: color('gray-50');
@@ -69,12 +67,10 @@
   }
 
   &__dots {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     min-width: 32px;
     color: color('gray-300');
-    font-size: 16px;
+    font-size: map-get($font-sizes, 'md');
   }
 
   // Compact variant (smaller, for less space)
@@ -82,8 +78,8 @@
     .pagination__button {
       min-width: 40px;
       height: 40px;
-      padding: 10px 16px;
-      font-size: 14px;
+      padding: space('2.5') space('4');
+      font-size: map-get($font-sizes, 'body');
     }
   }
 }

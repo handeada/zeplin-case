@@ -22,6 +22,7 @@ $colors: (
   'warning-light': #fff4eb,
   'error': #db0d15,
   'error-light': #fee2e2,
+  'error-dark': #9d0006,
   'info': #00c3d0,
   'info-light': #c6ecff,
 
@@ -49,6 +50,7 @@ $colors: (
   'bg-white': #ffffff,
   'bg-light': #f9f9f9,
   'bg-dark': #081542,
+  'footer-bg': #1e2d46,
 
   // Badge Colors (from D2C COLOR section)
   'badge-primary': #273d89,
@@ -74,6 +76,8 @@ $font-sizes: (
   'h4': 24px,
   'h5': 22px,
   'h6': 20px,
+  'lg': 18px,
+  'md': 16px,
   'body': 14px,
   'small': 12px,
   'xs': 10px,
@@ -103,6 +107,7 @@ $spacing: (
   '0': 0,
   '1': 4px,
   '2': 8px,
+  '2.5': 10px,
   '3': 12px,
   '4': 16px,
   '5': 20px,
@@ -120,6 +125,7 @@ $radius: (
   'lg': 8px,
   'xl': 12px,
   '2xl': 16px,
+  '3xl': 24px,
   'full': 9999px,
 );
 

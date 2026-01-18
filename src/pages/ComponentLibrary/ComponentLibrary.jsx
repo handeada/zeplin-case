@@ -246,19 +246,15 @@ const ComponentLibrary = () => {
           <section>
             <Typography variant="h4" weight="bold" className="mb-4">ToggleButtonGroup</Typography>
             <div className="space-y-4">
-              {/* Button State Labels */}
-              <div className="flex items-center gap-6">
-                <span className="text-xs text-gray-400 w-16 text-center">Default</span>
-                <span className="text-xs text-gray-400 w-16 text-center">Hover</span>
-                <span className="text-xs text-gray-400 w-16 text-center">Active</span>
-                <span className="text-xs text-gray-400 w-16 text-center">Disabled</span>
-              </div>
-              {/* Button State Showcase */}
-              <div className="flex items-center gap-3">
-                <Button variant="primary-default" size="md">Button</Button>
-                <Button variant="primary-hover" size="md">Button</Button>
-                <Button variant="primary-active" size="md">Button</Button>
-                <Button variant="primary-disabled" size="md" disabled>Button</Button>
+              {/* Button States - Interactive Example */}
+              <div className="space-y-2">
+                <Typography variant="body" weight="medium">Button States (hover to see interactions)</Typography>
+                <div className="flex items-center gap-3">
+                  <Button variant="primary" size="md">Primary</Button>
+                  <Button variant="secondary" size="md">Secondary</Button>
+                  <Button variant="outline" size="md">Outline</Button>
+                  <Button variant="primary" size="md" disabled>Disabled</Button>
+                </div>
               </div>
               {/* Toggle Group Example */}
               <ToggleButtonGroup

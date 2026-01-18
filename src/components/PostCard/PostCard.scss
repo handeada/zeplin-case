@@ -2,8 +2,7 @@
 @use '../../styles/mixins' as *;
 
 .post-card {
-  display: flex;
-  align-items: center;
+  @include flex-start;
   gap: space('4');
   padding: space('4') space('5');
   background-color: color('bg-white');
@@ -22,8 +21,7 @@
   }
 
   &__tags {
-    display: flex;
-    align-items: center;
+    @include flex-start;
     gap: space('2');
   }
 
@@ -71,8 +69,7 @@
   }
 
   &__meta-item {
-    display: flex;
-    align-items: center;
+    @include flex-start;
     gap: space('1');
   }
 
@@ -95,8 +92,7 @@
 
   // Actions section
   &__actions {
-    display: flex;
-    align-items: center;
+    @include flex-start;
     gap: space('2');
   }
 

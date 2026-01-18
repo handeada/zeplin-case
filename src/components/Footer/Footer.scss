@@ -2,20 +2,13 @@
 @use '../../styles/mixins' as *;
 
 .footer {
-  background-color: #1e2d46;
+  background-color: color('footer-bg');
   color: white;
   padding: space('10') 0 0 0;
   margin-top: auto;
 
   .container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 space('6');
-
-    @media (max-width: 768px) {
-      padding: 0 space('4');
-    }
+    @include container;
   }
 
   // Contact Section
@@ -41,11 +34,9 @@
     flex-shrink: 0;
     width: 48px;
     height: 48px;
-    border-radius: 50%;
+    border-radius: radius('full');
     border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     color: white;
   }
 
@@ -73,12 +64,11 @@
   }
 
   &__email {
-    font-size: 16px;
+    font-size: map-get($font-sizes, 'md');
   }
 
   &__email-link {
-    display: inline-flex;
-    align-items: center;
+    @include flex-start;
     gap: space('1');
     color: color('error');
     text-decoration: none;

@@ -80,6 +80,26 @@
   white-space: nowrap;
 }
 
+// Container mixin
+@mixin container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 space('6');
+
+  @media (max-width: 768px) {
+    padding: 0 space('4');
+  }
+}
+
+// Button disabled state mixin
+@mixin button-disabled {
+  background-color: color('gray-disabled');
+  color: color('gray-disabled-text');
+  cursor: not-allowed;
+  opacity: 1;
+}
+
 // Focus ring
 @mixin focus-ring {
   &:focus {
