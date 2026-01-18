@@ -21,7 +21,8 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: $font-family-base;
+  font-style: normal;
   font-size: map-get($font-sizes, 'body');
   line-height: map-get($line-heights, 'body');
   color: color('text-primary');

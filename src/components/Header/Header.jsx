@@ -20,7 +20,7 @@ const Header = () => {
             {/* Row 1 - Top Info */}
             <div className="header__top-row">
               <div className="header__email">
-                <Icon name="email" size={16} />
+                <Icon name="email" size="1.5rem" />
                 <span>profuture@gmail.com</span>
               </div>
               <div className="header__info">

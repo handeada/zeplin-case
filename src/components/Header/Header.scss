@@ -79,21 +79,24 @@
 
   &__email {
     display: flex;
-    align-items: center;
-    gap: space("2");
-    font-size: map-get($font-sizes, "small");
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: space("3.5");
     color: white;
+    font-size: map-get($font-sizes, "md-lg");
   }
 
   &__info {
     display: flex;
     align-items: center;
     gap: space("6");
-    font-size: map-get($font-sizes, "small");
+    font-size: map-get($font-sizes, "md-lg");
     color: white;
+    width: 29.5rem;
 
     strong {
-      font-weight: map-get($font-weights, "semibold");
+      font-weight: map-get($font-weights, "bold");
     }
 
     @media (max-width: 768px) {
