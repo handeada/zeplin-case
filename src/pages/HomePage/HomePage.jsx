@@ -109,7 +109,6 @@ const HomePage = () => {
       <Header />
       <Hero />
       <CardsSection />
-      <PromotionSection />
       <ListingSection
         title="Sayılar"
         subtitle="Dergiler"
@@ -119,6 +118,7 @@ const HomePage = () => {
         onPageChange={handlePageChange}
         onViewAll={handleViewAll}
       />
+      <PromotionSection />
       <CTASection />
       <Footer />
     </div>
