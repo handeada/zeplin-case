@@ -1,9 +1,9 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .hero {
-  background-color: color('bg-light');
-  padding: 0 0 space('10') 0;
+  background-color: color("bg-light");
+  padding: 0 0 space("10") 0;
 
   .container {
     @include container;
@@ -13,22 +13,21 @@
   // Top Row - Latest Issue
   &__top-row {
     position: relative;
-    background-color: color('primary-dark');
-    border-radius: radius('2xl');
-    padding: space('10') space('8');
-    margin-bottom: space('8');
+    background-color: color("primary-dark");
+    border-radius: radius("2xl");
+    padding: space("10") space("8");
     overflow: visible;
     min-height: 400px;
     display: flex;
     align-items: center;
 
     @media (max-width: 1024px) {
-      padding: space('8') space('6');
+      padding: space("8") space("6");
       min-height: 350px;
     }
 
     @media (max-width: 768px) {
-      padding: space('6') space('4');
+      padding: space("6") space("4");
       min-height: auto;
       flex-direction: column;
     }
@@ -41,7 +40,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    border-radius: radius('2xl');
+    border-radius: radius("2xl");
     overflow: hidden;
 
     img {
@@ -56,115 +55,118 @@
     position: relative;
     z-index: 1;
     max-width: 500px;
-    color: color('bg-white');
+    color: color("bg-white");
 
     @media (max-width: 768px) {
       max-width: 100%;
       text-align: center;
-      margin-bottom: space('6');
+      margin-bottom: space("6");
     }
   }
 
   &__title {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'h1');
-    line-height: map-get($line-heights, 'h1');
-    font-weight: map-get($font-weights, 'bold');
-    color: color('bg-white');
-    margin: space('3') 0;
+    font-size: map-get($font-sizes, "h1");
+    line-height: map-get($line-heights, "h1");
+    font-weight: map-get($font-weights, "bold");
+    color: color("bg-white");
+    margin: space("3") 0;
 
     @media (max-width: 768px) {
-      font-size: map-get($font-sizes, 'h3');
-      line-height: map-get($line-heights, 'h3');
+      font-size: map-get($font-sizes, "h3");
+      line-height: map-get($line-heights, "h3");
     }
   }
 
   &__description {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'body');
-    line-height: map-get($line-heights, 'body');
-    font-weight: map-get($font-weights, 'regular');
-    color: color('bg-white');
-    margin: 0 0 space('6') 0;
+    font-size: map-get($font-sizes, "body");
+    line-height: map-get($line-heights, "body");
+    font-weight: map-get($font-weights, "regular");
+    color: color("bg-white");
+    margin: 0 0 space("6") 0;
     opacity: 0.9;
 
     @media (max-width: 768px) {
-      font-size: map-get($font-sizes, 'small');
+      font-size: map-get($font-sizes, "small");
     }
   }
 
   &__issue-details {
     display: flex;
-    gap: space('6');
-    margin-bottom: space('6');
+    gap: space("6");
+    margin-bottom: space("6");
 
     @media (max-width: 768px) {
       flex-direction: column;
-      gap: space('2');
+      gap: space("2");
       align-items: center;
     }
   }
 
   &__detail-item {
     display: flex;
-    gap: space('2');
+    gap: space("2");
     align-items: center;
   }
 
   &__detail-label {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'body');
-    font-weight: map-get($font-weights, 'regular');
-    color: color('bg-white');
+    font-size: map-get($font-sizes, "body");
+    font-weight: map-get($font-weights, "regular");
+    color: color("bg-white");
     opacity: 0.8;
   }
 
   &__detail-value {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'body');
-    font-weight: map-get($font-weights, 'bold');
-    color: color('bg-white');
+    font-size: map-get($font-sizes, "body");
+    font-weight: map-get($font-weights, "bold");
+    color: color("bg-white");
+  }
+
+  // Bottom Row - About
+  &__bottom-row {
+    position: relative;
+    background-color: color("bg-white");
+    border-radius: radius("2xl");
+    padding: space("8");
+    box-shadow: map-get($shadows, "md");
+
+    @media (max-width: 768px) {
+      padding: space("6") space("4");
+    }
   }
 
   &__magazine-image {
     position: absolute;
-    right: space('8');
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px;
+    right: 100px;
+    bottom: 0;
+    width: 370px;
+    height: 348px;
     z-index: 2;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: contain;
       display: block;
       filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
     }
 
     @media (max-width: 1024px) {
-      width: 250px;
-      right: space('6');
+      width: 300px;
+      height: 280px;
+      right: space("6");
     }
 
     @media (max-width: 768px) {
       position: relative;
       right: auto;
-      top: auto;
-      transform: none;
+      bottom: auto;
       width: 200px;
-      margin: 0 auto;
-    }
-  }
-
-  // Bottom Row - About
-  &__bottom-row {
-    background-color: color('bg-white');
-    border-radius: radius('2xl');
-    padding: space('8');
-    box-shadow: map-get($shadows, 'md');
-
-    @media (max-width: 768px) {
-      padding: space('6') space('4');
+      height: auto;
+      margin: space("6") auto 0;
     }
   }
 
@@ -178,39 +180,39 @@
 
   &__about-label {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'small');
-    color: color('text-secondary');
+    font-size: map-get($font-sizes, "small");
+    color: color("text-secondary");
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-weight: map-get($font-weights, 'semibold');
+    font-weight: map-get($font-weights, "semibold");
     display: block;
-    margin-bottom: space('2');
+    margin-bottom: space("2");
   }
 
   &__about-title {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'h3');
-    line-height: map-get($line-heights, 'h3');
-    font-weight: map-get($font-weights, 'bold');
-    color: color('text-primary');
-    margin: 0 0 space('3') 0;
+    font-size: map-get($font-sizes, "h3");
+    line-height: map-get($line-heights, "h3");
+    font-weight: map-get($font-weights, "bold");
+    color: color("text-primary");
+    margin: 0 0 space("3") 0;
 
     @media (max-width: 768px) {
-      font-size: map-get($font-sizes, 'h4');
-      line-height: map-get($line-heights, 'h4');
+      font-size: map-get($font-sizes, "h4");
+      line-height: map-get($line-heights, "h4");
     }
   }
 
   &__about-description {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'body');
-    line-height: map-get($line-heights, 'body');
-    font-weight: map-get($font-weights, 'regular');
-    color: color('text-secondary');
-    margin: 0 0 space('6') 0;
+    font-size: map-get($font-sizes, "body");
+    line-height: map-get($line-heights, "body");
+    font-weight: map-get($font-weights, "regular");
+    color: color("text-secondary");
+    margin: 0 0 space("6") 0;
 
     @media (max-width: 768px) {
-      font-size: map-get($font-sizes, 'small');
+      font-size: map-get($font-sizes, "small");
     }
   }
 }

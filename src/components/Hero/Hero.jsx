@@ -41,10 +41,6 @@ const Hero = () => {
               Dergiyi Görüntüle
             </Button>
           </div>
-
-          <div className="hero__magazine-image">
-            <img src={magazineImage} alt="Profuture Teknoloji Dergisi Son Sayı" />
-          </div>
         </div>
 
         {/* Second Row - About */}
@@ -61,6 +57,10 @@ const Hero = () => {
             <Button variant="secondary" size="medium">
               Detay
             </Button>
+          </div>
+
+          <div className="hero__magazine-image">
+            <img src={magazineImage} alt="Profuture Teknoloji Dergisi Son Sayı" />
           </div>
         </div>
       </div>
