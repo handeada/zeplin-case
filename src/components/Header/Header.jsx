@@ -1,18 +1,20 @@
-import { Link } from 'react-router-dom';
-import Button from '../Button';
-import Icon from '../Icon';
-import './Header.scss';
-import logo from '../../assets/images/logo.png';
+import { Link } from "react-router-dom";
+import Button from "../Button";
+import Icon from "../Icon";
+import "./Header.scss";
+import logo from "../../assets/images/logo.png";
 
 const Header = () => {
   return (
     <header className="header">
-      <div className="container">
+      <div>
         <div className="header__content">
           {/* Left Column - Logo */}
-          <Link to="/" className="header__logo">
-            <img src={logo} alt="Profuture" />
-          </Link>
+          <div className="header__logo-container">
+            <Link to="/" className="header__logo">
+              <img src={logo} alt="Profuture" />
+            </Link>
+          </div>
 
           {/* Right Column */}
           <div className="header__right">
@@ -23,16 +25,25 @@ const Header = () => {
                 <span>profuture@gmail.com</span>
               </div>
               <div className="header__info">
-                <span>ISSN: <strong>345-255</strong></span>
-                <span>Başlangıç <strong>2025</strong></span>
-                <span>Periyot: <strong>Yılda 2 Sayı</strong></span>
+                <span>
+                  ISSN: <strong>345-255</strong>
+                </span>
+                <span>
+                  Başlangıç <strong>2025</strong>
+                </span>
+                <span>
+                  Periyot: <strong>Yılda 2 Sayı</strong>
+                </span>
               </div>
             </div>
 
             {/* Row 2 - Navigation */}
             <div className="header__bottom-row">
               <nav className="header__nav">
-                <Link to="/" className="header__nav-link header__nav-link--home">
+                <Link
+                  to="/"
+                  className="header__nav-link header__nav-link--home"
+                >
                   <Icon name="home" size={20} />
                 </Link>
                 <Link to="/amac-kapsam" className="header__nav-link">
