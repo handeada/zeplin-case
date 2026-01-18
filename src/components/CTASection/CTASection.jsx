@@ -1,6 +1,6 @@
-import Button from '../Button';
-import Icon from '../Icon';
-import PostCard from '../PostCard';
+import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
+import PostCard from '../PostCard/PostCard';
 import './CTASection.scss';
 import magazineImage from '../../assets/images/image 1.png';
 

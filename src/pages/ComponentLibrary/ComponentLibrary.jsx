@@ -1,14 +1,12 @@
 import { useState } from 'react';
-import {
-  Typography,
-  Button,
-  Badge,
-  Card,
-  ToggleButtonGroup,
-  Pagination,
-  Icon,
-  PublicationCard,
-} from '../../components';
+import Typography from '../../components/Typography/Typography';
+import Button from '../../components/Button/Button';
+import Badge from '../../components/Badge/Badge';
+import Card from '../../components/Card/Card';
+import ToggleButtonGroup from '../../components/ToggleButtonGroup/ToggleButtonGroup';
+import Pagination from '../../components/Pagination/Pagination';
+import Icon from '../../components/Icon/Icon';
+import PublicationCard from '../../components/PublicationCard/PublicationCard';
 import magazineImage from '../../assets/images/1_1,6176.png';
 
 // Icons

@@ -1,6 +1,6 @@
 import './Card.scss';
-import Badge from '../Badge';
-import Button from '../Button';
+import Badge from '../Badge/Badge';
+import Button from '../Button/Button';
 
 const Card = ({
   variant = 'default',

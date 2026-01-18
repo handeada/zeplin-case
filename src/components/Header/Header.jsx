@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Button from "../Button";
-import Icon from "../Icon";
+import Button from "../Button/Button";
+import Icon from "../Icon/Icon";
 import "./Header.scss";
 import logo from "../../assets/images/logo.png";
 

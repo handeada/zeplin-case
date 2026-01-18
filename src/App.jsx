@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./styles/main.scss";
-import { HomePage, ComponentLibrary } from "./pages";
+import HomePage from "./pages/HomePage/HomePage";
+import ComponentLibrary from "./pages/ComponentLibrary/ComponentLibrary";
 
 function App() {
   return (
