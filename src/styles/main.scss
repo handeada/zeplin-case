@@ -5,58 +5,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-// Tailwind imports
-@import "tailwindcss";
-
-// CSS Custom Properties for Tailwind integration
-:root {
-  // Colors
-  --color-primary: #{color('primary')};
-  --color-primary-light: #{color('primary-light')};
-  --color-primary-lighter: #{color('primary-lighter')};
-  --color-primary-dark: #{color('primary-dark')};
-
-  --color-success: #{color('success')};
-  --color-success-light: #{color('success-light')};
-  --color-warning: #{color('warning')};
-  --color-warning-light: #{color('warning-light')};
-  --color-error: #{color('error')};
-  --color-error-light: #{color('error-light')};
-  --color-info: #{color('info')};
-  --color-info-light: #{color('info-light')};
-
-  --color-gray-50: #{color('gray-50')};
-  --color-gray-100: #{color('gray-100')};
-  --color-gray-200: #{color('gray-200')};
-  --color-gray-300: #{color('gray-300')};
-  --color-gray-400: #{color('gray-400')};
-  --color-gray-500: #{color('gray-500')};
-  --color-gray-600: #{color('gray-600')};
-  --color-gray-700: #{color('gray-700')};
-  --color-gray-800: #{color('gray-800')};
-  --color-gray-900: #{color('gray-900')};
-
-  // Typography
-  --font-family: #{$font-family-base};
-}
-
-// Tailwind theme customization
-@theme {
-  --color-primary: #1e5aa8;
-  --color-primary-light: #e8f0f8;
-  --color-primary-lighter: #f5f8fc;
-  --color-primary-dark: #164785;
-
-  --color-success: #22c55e;
-  --color-success-light: #dcfce7;
-  --color-warning: #f97316;
-  --color-warning-light: #ffedd5;
-  --color-error: #ef4444;
-  --color-error-light: #fee2e2;
-  --color-info: #3b82f6;
-  --color-info-light: #dbeafe;
-}
-
 // Global Reset & Base Styles
 *,
 *::before,
