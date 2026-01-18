@@ -34,11 +34,11 @@
     text-decoration: none;
     background-color: color("primary");
     border-radius: 0 54px 0 0;
-    padding: space("2.5") space("6");
+    padding: 1.25rem 4rem 1.5rem 2rem;
 
     img {
-      height: 80px;
-      width: auto;
+      width: 283px;
+      height: 91px;
       display: block;
     }
 
@@ -54,6 +54,7 @@
 
   // Right Column
   &__right {
+    background-color: color("bg-white");
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -63,10 +64,11 @@
   // Top Row - Info
   &__top-row {
     display: flex;
+    background-color: color("primary-dark");
     align-items: center;
     justify-content: space-between;
 
-    padding: space("2") space("6");
+    padding: space("2.5") space("6");
     color: white;
 
     @media (max-width: 1024px) {
@@ -109,6 +111,7 @@
   // Bottom Row - Navigation
   &__bottom-row {
     display: flex;
+    height: 100%;
     align-items: center;
     background-color: color("bg-white");
     padding: space("3") space("6");
@@ -161,10 +164,13 @@
   }
 
   &__nav-link {
-    color: color("primary");
+    color: color("gray-500");
     text-decoration: none;
-    font-size: map-get($font-sizes, "body");
-    font-weight: map-get($font-weights, "medium");
+    font-size: 1.063rem;
+    font-weight: map-get($font-weights, "regular");
+    line-height: 1.313rem;
+    letter-spacing: 0%;
+    text-align: left;
     transition: all $transition-fast;
     white-space: nowrap;
 

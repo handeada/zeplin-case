@@ -39,7 +39,7 @@ const Header = () => {
           <div className="header__bottom-row">
             <div className="header__bottom-col-2">
               <Link to="/">
-                <Icon name="home" size="1.25rem" />
+                <Icon name="home" size="24px" />
               </Link>
             </div>
 
