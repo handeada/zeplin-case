@@ -139,7 +139,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: space("4");
+    gap: space("6");
 
     @media (max-width: 768px) {
       width: 100%;
@@ -151,7 +151,7 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: space("6");
+    gap: space("2.5");
     flex: 1;
 
     @media (max-width: 1200px) {
