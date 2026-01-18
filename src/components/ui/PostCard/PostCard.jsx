@@ -1,4 +1,6 @@
-import { Badge, Button, Icon } from '../ui';
+import Badge from '../Badge/Badge';
+import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
 import './PostCard.scss';
 
 const PostCard = ({

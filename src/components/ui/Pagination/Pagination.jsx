@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import './Pagination.scss';
-import { Icon } from '../ui';
+import Icon from '../Icon/Icon';
 
 const Pagination = ({
   currentPage = 1,
