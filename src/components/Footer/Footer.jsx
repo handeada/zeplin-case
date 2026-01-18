@@ -1,5 +1,5 @@
-import { Icon } from '../ui';
-import './Footer.scss';
+import { Icon } from "../ui";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
               <h4>Dergi Editörü</h4>
               <p className="footer__name">Prof. Dr. Elif Başkaya Acar</p>
               <a href="mailto:elif@gmail.com" className="footer__email-link">
-                <Icon name="email" size={14} />
+                <Icon name="email" size={24} />
                 elif@gmail.com
               </a>
             </div>
@@ -49,10 +49,12 @@ const Footer = () => {
         {/* Disclaimer */}
         <div className="footer__disclaimer">
           <p>
-            Bu sitede yer alan tüm yazılı, görsel ve uygulama içerikleri kaynak gösterilmeden kullanılamaz.
-            Site içerisinde sunulan bilgiler yalnızca bilgilendirme amacıyla hazırlanmış olup, bu bilgilerin
-            kullanımından doğabilecek her türlü sorumluluk kullanıcıya aittir. Siteye erişim sağlayan
-            kullanıcılar, bu şartları okumuş, anlamış ve kabul etmiş sayılır.
+            Bu sitede yer alan tüm yazılı, görsel ve uygulama içerikleri kaynak
+            gösterilmeden kullanılamaz. Site içerisinde sunulan bilgiler
+            yalnızca bilgilendirme amacıyla hazırlanmış olup, bu bilgilerin
+            kullanımından doğabilecek her türlü sorumluluk kullanıcıya aittir.
+            Siteye erişim sağlayan kullanıcılar, bu şartları okumuş, anlamış ve
+            kabul etmiş sayılır.
           </p>
         </div>
       </div>

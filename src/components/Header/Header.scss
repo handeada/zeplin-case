@@ -65,7 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: color("primary-dark");
+
     padding: space("2") space("6");
     color: white;
 
@@ -110,10 +110,8 @@
   &__bottom-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: color("bg-white");
     padding: space("3") space("6");
-    gap: space("4");
 
     @media (max-width: 1024px) {
       padding: space("3") space("4");
@@ -121,14 +119,40 @@
     }
   }
 
+  &__bottom-col-2 {
+    width: 16.666667%; // 2/12 of grid
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media (max-width: 768px) {
+      width: auto;
+    }
+  }
+
+  &__bottom-col-10 {
+    width: 83.333333%; // 10/12 of grid
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: space("4");
+
+    @media (max-width: 768px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
   &__nav {
     display: flex;
     align-items: center;
-    gap: space("4");
+    gap: space("6");
     flex: 1;
 
     @media (max-width: 1200px) {
-      gap: space("3");
+      gap: space("4");
     }
 
     @media (max-width: 768px) {
@@ -141,27 +165,17 @@
     text-decoration: none;
     font-size: map-get($font-sizes, "body");
     font-weight: map-get($font-weights, "medium");
-    transition: opacity $transition-fast;
+    transition: all $transition-fast;
     white-space: nowrap;
-
-    &:hover {
-      opacity: 0.7;
-    }
 
     &--home {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       border-radius: radius("md");
-      background-color: color("secondary");
       color: white;
-
-      &:hover {
-        opacity: 1;
-        background-color: color("secondary-dark");
-      }
     }
 
     @media (max-width: 1200px) {
@@ -172,30 +186,12 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: space("2");
+    gap: space("3");
     flex-shrink: 0;
 
     @media (max-width: 768px) {
       width: 100%;
       justify-content: flex-end;
-    }
-  }
-
-  &__search-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: radius("full");
-    border: none;
-    background: transparent;
-    color: color("primary");
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all $transition-fast;
-
-    &:hover {
-      background: rgba(39, 61, 137, 0.1);
     }
   }
 }
