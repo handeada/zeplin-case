@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import './Pagination.scss';
+import Icon from '../Icon/Icon';
 
 const Pagination = ({
   currentPage = 1,
@@ -8,6 +9,7 @@ const Pagination = ({
   siblingCount = 1,
   showFirstLast = true,
   size = 'md',
+  navigationOnly = false,
   className = '',
   ...props
 }) => {
@@ -57,11 +59,11 @@ const Pagination = ({
 
   return (
     <nav
-      className={`pagination pagination--${size} ${className}`}
+      className={`pagination pagination--${size} ${navigationOnly ? 'pagination--navigation-only' : ''} ${className}`}
       aria-label="Pagination"
       {...props}
     >
-      {showFirstLast && (
+      {!navigationOnly && showFirstLast && (
         <button
           type="button"
           className="pagination__button pagination__button--nav"
@@ -69,9 +71,8 @@ const Pagination = ({
           disabled={currentPage === 1}
           aria-label="First page"
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M11 17l-5-5 5-5M18 17l-5-5 5-5" />
-          </svg>
+          <Icon name="arrowLeft" size={14} />
+          <Icon name="arrowLeft" size={14} />
         </button>
       )}
 
@@ -82,28 +83,28 @@ const Pagination = ({
         disabled={currentPage === 1}
         aria-label="Previous page"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M15 19l-7-7 7-7" />
-        </svg>
+        <Icon name="arrowLeft" size={14} />
       </button>
 
-      <div className="pagination__pages">
-        {pages.map((page, index) => (
-          page === '...' ? (
-            <span key={`dots-${index}`} className="pagination__dots">...</span>
-          ) : (
-            <button
-              key={page}
-              type="button"
-              className={`pagination__button ${currentPage === page ? 'pagination__button--active' : ''}`}
-              onClick={() => handlePageChange(page)}
-              aria-current={currentPage === page ? 'page' : undefined}
-            >
-              {page}
-            </button>
-          )
-        ))}
-      </div>
+      {!navigationOnly && (
+        <div className="pagination__pages">
+          {pages.map((page, index) => (
+            page === '...' ? (
+              <span key={`dots-${index}`} className="pagination__dots">...</span>
+            ) : (
+              <button
+                key={page}
+                type="button"
+                className={`pagination__button ${currentPage === page ? 'pagination__button--active' : ''}`}
+                onClick={() => handlePageChange(page)}
+                aria-current={currentPage === page ? 'page' : undefined}
+              >
+                {page}
+              </button>
+            )
+          ))}
+        </div>
+      )}
 
       <button
         type="button"
@@ -112,12 +113,10 @@ const Pagination = ({
         disabled={currentPage === totalPages}
         aria-label="Next page"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M9 5l7 7-7 7" />
-        </svg>
+        <Icon name="arrowRight" size={14} />
       </button>
 
-      {showFirstLast && (
+      {!navigationOnly && showFirstLast && (
         <button
           type="button"
           className="pagination__button pagination__button--nav"
@@ -125,9 +124,8 @@ const Pagination = ({
           disabled={currentPage === totalPages}
           aria-label="Last page"
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M13 17l5-5-5-5M6 17l5-5-5-5" />
-          </svg>
+          <Icon name="arrowRight" size={14} />
+          <Icon name="arrowRight" size={14} />
         </button>
       )}
     </nav>

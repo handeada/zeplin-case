@@ -10,25 +10,28 @@
     gap: space('2.5');
   }
 
-  // D2C Style: Pill-shaped pagination with border
+  // D2C Style: Rounded-square pagination buttons
   &__button {
     @include flex-center;
     gap: space('2.5');
-    min-width: 55px;
-    height: 55px;
-    padding: 17px 24px 17px 15px;
-    font-family: $font-family-base;
-    font-weight: map-get($font-weights, 'regular');
-    font-size: map-get($font-sizes, 'md');
-    color: color('gray-500');
-    background-color: transparent;
-    border: 1px solid color('gray-300');
-    border-radius: radius('full');
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    padding: space('3');
+    font-family: 'Inter', $font-family-base;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #666E8B; // rgba(102, 110, 139, 1)
+    background-color: color('gray-50');
+    border: 1px solid transparent;
+    border-radius: 15px;
     cursor: pointer;
     transition: all $transition-fast;
 
     &:hover:not(:disabled):not(.pagination__button--active) {
-      background-color: color('gray-50');
+      background-color: color('gray-100');
       border-color: color('primary');
       color: color('primary');
     }
@@ -37,31 +40,47 @@
       outline: none;
     }
 
-    // Active state (D2C: #112053 dark primary)
+    // Active state (primary blue)
     &--active {
-      background-color: color('primary-dark'); // #112053
-      border-color: color('primary-dark');
+      background-color: color('primary');
+      border-color: color('primary');
       color: white;
     }
 
     &--nav {
-      color: color('text-secondary');
-      min-width: 55px;
-      gap: 22px;
-
-      &:hover:not(:disabled) {
-        color: color('primary');
-        border-color: color('primary');
-      }
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      padding: 13px 15px;
+      border-radius: 15px;
+      background-color: #F5F7FF; // rgba(245, 247, 255, 1)
 
       svg {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
+
+        path {
+          fill: #273D89; // rgba(39, 61, 137, 1)
+          stroke: #273D89;
+          stroke-width: 1px;
+        }
+      }
+
+      &:hover:not(:disabled) {
+        background-color: #F5F7FF;
+      }
+
+      &:disabled {
+        background-color: #E7EAF5; // rgba(231, 234, 245, 1)
+
+        svg path {
+          fill: #ACB1C6; // rgba(172, 177, 198, 1)
+          stroke: #ACB1C6;
+        }
       }
     }
 
     &:disabled {
-      opacity: 0.3;
       cursor: not-allowed;
     }
   }

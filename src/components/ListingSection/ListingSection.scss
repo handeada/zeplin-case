@@ -15,4 +15,110 @@
       padding: 0 space('4');
     }
   }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: space('8');
+    gap: space('6');
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: space('5');
+    }
+  }
+
+  &__header-left {
+    display: flex;
+    align-items: center;
+    gap: space('6');
+    flex: 1;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: space('5');
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: space('3');
+    }
+  }
+
+  &__title-content {
+    display: flex;
+    flex-direction: column;
+    gap: space('2');
+  }
+
+  &__label {
+    color: color('text-secondary');
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+  }
+
+  &__subtitle {
+    color: color('text-primary');
+  }
+
+  &__navigation {
+    flex-shrink: 0;
+  }
+
+  &__view-all {
+    display: flex;
+    align-items: center;
+    gap: space('2');
+    padding: space('3') space('6');
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    @media (max-width: 1024px) {
+      align-self: flex-start;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: space('6');
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: space('4');
+    margin-bottom: -#{space('4')};
+
+    /* Hide scrollbar but keep functionality */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    @media (max-width: 768px) {
+      gap: space('4');
+    }
+  }
+
+  &__card {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 600px;
+
+    @media (max-width: 1024px) {
+      max-width: 500px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
+
+    @media (max-width: 640px) {
+      max-width: 85%;
+    }
+  }
 }
