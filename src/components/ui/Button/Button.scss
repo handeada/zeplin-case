@@ -201,9 +201,14 @@
   &--icon {
     background-color: transparent;
     color: color('text-secondary');
-    padding: 18.5px;
+    padding: 0;
+    width: 55px;
+    height: 55px;
     min-width: 55px;
     min-height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid color('gray-300');
     border-radius: 100px;
 

@@ -66,16 +66,19 @@ const Header = () => {
                 <Button
                   variant="primary-filled"
                   size="md"
-                  leftIcon={<Icon name="committee" size="24px" />}
+                  leftIcon={<Icon name="committee" size="24px" viewBox="0 0 24 21" />}
                 >
                   Dergi Kurulu
                 </Button>
                 <Button
                   variant="secondary-filled"
                   size="md"
-                  leftIcon={<Icon name="authorGuide" size="24px" />}
+                  leftIcon={<Icon name="authorGuide" size="24px" viewBox="0 0 22 20" />}
                 >
                   Yazar Rehberi
+                </Button>
+                <Button variant="icon">
+                  <Icon name="search" size="24px" />
                 </Button>
               </div>
             </div>
