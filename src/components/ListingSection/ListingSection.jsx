@@ -17,6 +17,23 @@ const ListingSection = ({
 }) => {
   const scrollContainerRef = useRef(null);
 
+  const handlePageChange = (page) => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 465; // PublicationCard width
+      const gap = 24; // space('6') = 24px
+      const scrollAmount = (cardWidth + gap) * 3 * (page - 1);
+
+      scrollContainerRef.current.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    if (onPageChange) {
+      onPageChange(page);
+    }
+  };
+
   return (
     <section className="listing-section">
       <div className="container">
@@ -37,7 +54,7 @@ const ListingSection = ({
               <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
-                onPageChange={onPageChange}
+                onPageChange={handlePageChange}
                 navigationOnly
                 className="listing-section__navigation"
               />

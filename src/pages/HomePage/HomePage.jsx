@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Header,
   Hero,
@@ -10,6 +11,8 @@ import "./HomePage.scss";
 import magazineImage from "../../assets/images/1_1,6176.png";
 
 const HomePage = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
   const samplePublications = [
     {
       id: 1,
@@ -50,9 +53,49 @@ const HomePage = () => {
       onDownload: () => console.log("Download clicked"),
       onNavigate: () => console.log("Navigate clicked"),
     },
+    {
+      id: 4,
+      image: magazineImage,
+      isNew: false,
+      type: "Dergi",
+      title: "Teknoloji ve Dijital Dergisi",
+      volume: 1,
+      issue: 4,
+      date: "Mart 2023",
+      onView: () => console.log("View clicked"),
+      onDownload: () => console.log("Download clicked"),
+      onNavigate: () => console.log("Navigate clicked"),
+    },
+    {
+      id: 5,
+      image: magazineImage,
+      isNew: false,
+      type: "Dergi",
+      title: "Teknoloji ve Dijital Dergisi",
+      volume: 1,
+      issue: 5,
+      date: "Nisan 2023",
+      onView: () => console.log("View clicked"),
+      onDownload: () => console.log("Download clicked"),
+      onNavigate: () => console.log("Navigate clicked"),
+    },
+    {
+      id: 6,
+      image: magazineImage,
+      isNew: false,
+      type: "Dergi",
+      title: "Teknoloji ve Dijital Dergisi",
+      volume: 1,
+      issue: 6,
+      date: "Mayıs 2023",
+      onView: () => console.log("View clicked"),
+      onDownload: () => console.log("Download clicked"),
+      onNavigate: () => console.log("Navigate clicked"),
+    },
   ];
 
   const handlePageChange = (page) => {
+    setCurrentPage(page);
     console.log("Page changed to:", page);
   };
 
@@ -69,8 +112,8 @@ const HomePage = () => {
         title="Sayılar"
         subtitle="Dergiler"
         publications={samplePublications}
-        currentPage={1}
-        totalPages={5}
+        currentPage={currentPage}
+        totalPages={2}
         onPageChange={handlePageChange}
         onViewAll={handleViewAll}
       />
