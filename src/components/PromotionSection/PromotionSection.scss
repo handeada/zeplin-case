@@ -1,8 +1,8 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .promotion-section {
-  padding: space('10') 0;
+  padding: space("10") 0;
 
   .container {
     @include container;
@@ -12,16 +12,15 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: space('8');
-    background-color: color('bg-white');
-    border-radius: radius('2xl');
-    padding: space('8');
-    box-shadow: map-get($shadows, 'md');
+    gap: space("8");
+    background-color: color("bg-white");
+    border-radius: radius("2xl");
+    box-shadow: map-get($shadows, "md");
     overflow: visible;
 
     @media (max-width: 1024px) {
       flex-direction: column;
-      gap: space('6');
+      gap: space("6");
       overflow: hidden;
     }
   }
@@ -52,7 +51,7 @@
     img {
       width: 100%;
       height: auto;
-      border-radius: radius('xl');
+      border-radius: radius("xl");
       display: block;
     }
 
@@ -75,7 +74,7 @@
 
   &__right {
     position: absolute;
-    right: space('8');
+    right: space("8");
     top: 50%;
     transform: translateY(-50%);
     width: 240px;
@@ -93,11 +92,13 @@
   &__center {
     flex: 1;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: space('4');
+    gap: space("4");
     position: relative;
     z-index: 1;
     max-width: 550px;
+    padding: space("8");
 
     @media (max-width: 1024px) {
       text-align: center;
@@ -106,40 +107,50 @@
     }
   }
 
+  &__icon {
+    color: color("error");
+    margin-bottom: space("2");
+    transform: rotate(-30deg);
+    @media (max-width: 1024px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   &__category {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'small');
-    color: color('text-secondary');
+    font-size: map-get($font-sizes, "h5");
+    color: color("text-secondary");
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-weight: map-get($font-weights, 'semibold');
+    font-weight: map-get($font-weights, "semibold");
     margin: 0;
   }
 
   &__title {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'h2');
-    line-height: map-get($line-heights, 'h2');
-    font-weight: map-get($font-weights, 'bold');
-    color: color('text-primary');
+    font-size: map-get($font-sizes, "h2");
+    line-height: map-get($line-heights, "h2");
+    font-weight: map-get($font-weights, "bold");
+    color: color("text-primary");
     margin: 0;
 
     @media (max-width: 768px) {
-      font-size: map-get($font-sizes, 'h4');
-      line-height: map-get($line-heights, 'h4');
+      font-size: map-get($font-sizes, "h4");
+      line-height: map-get($line-heights, "h4");
     }
   }
 
   &__description {
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'body');
-    line-height: map-get($line-heights, 'body');
-    font-weight: map-get($font-weights, 'regular');
-    color: color('text-secondary');
+    font-size: map-get($font-sizes, "lg");
+    line-height: map-get($line-heights, "body");
+    font-weight: map-get($font-weights, "regular");
+    color: color("text-secondary");
     margin: 0;
 
     @media (max-width: 768px) {
-      font-size: map-get($font-sizes, 'small');
+      font-size: map-get($font-sizes, "small");
     }
   }
 }

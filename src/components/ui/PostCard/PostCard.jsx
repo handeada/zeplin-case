@@ -1,11 +1,11 @@
-import Badge from '../Badge/Badge';
-import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
-import './PostCard.scss';
+import Badge from "../Badge/Badge";
+import Button from "../Button/Button";
+import Icon from "../Icon/Icon";
+import "./PostCard.scss";
 
 const PostCard = ({
   category,
-  categoryVariant = 'primary',
+  categoryVariant = "primary",
   articleType,
   title,
   pageRange,
@@ -13,7 +13,7 @@ const PostCard = ({
   onPrint,
   onDownload,
   onView,
-  className = '',
+  className = "",
   ...props
 }) => {
   return (
@@ -47,7 +47,7 @@ const PostCard = ({
           {authors.length > 0 && (
             <div className="post-card__meta-item">
               <Icon name="users" size={16} className="post-card__meta-icon" />
-              <span className="post-card__authors">{authors.join(', ')}</span>
+              <span className="post-card__authors">{authors.join(", ")}</span>
             </div>
           )}
         </div>
@@ -55,12 +55,7 @@ const PostCard = ({
 
       {/* Actions Section */}
       <div className="post-card__actions">
-        <Button
-          variant="icon"
-          size="md"
-          onClick={onPrint}
-          aria-label="Yazdır"
-        >
+        <Button variant="icon" size="md" onClick={onPrint} aria-label="Yazdır">
           <Icon name="printer" size={20} />
         </Button>
         <Button
@@ -72,7 +67,7 @@ const PostCard = ({
           <Icon name="download" size={20} />
         </Button>
         <Button
-          variant="primary"
+          variant="primary-filled"
           size="md"
           onClick={onView}
           leftIcon={<Icon name="eye" size={20} />}

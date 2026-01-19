@@ -188,6 +188,39 @@
   }
 
   // ===========================================
+  // Default Filled Button (Figma variant)
+  // Default: White bg, gray border, dark gray text
+  // Hover: Primary-dark bg, primary-dark border, white text
+  // ===========================================
+  &--warning-filled {
+    background-color: color("error");
+    color: white;
+    padding: 17px 24px 17px 15px;
+    border: 1px solid color("gray-300");
+    border-radius: 50px;
+    font-family: $font-family-base;
+    font-size: map-get($font-sizes, "md-lg");
+    font-weight: map-get($font-weights, "regular");
+    line-height: 21px;
+    letter-spacing: 0%;
+
+    &:hover:not(:disabled) {
+      background-color: color("error-dark");
+      color: white;
+      border-color: color("error-dark");
+    }
+
+    &:active:not(:disabled) {
+      background-color: color("error-dark");
+      color: white;
+      border-color: color("error-dark");
+    }
+
+    &:disabled {
+      @include button-disabled;
+    }
+  }
+  // ===========================================
   // Outline Button
   // ===========================================
   &--outline {
