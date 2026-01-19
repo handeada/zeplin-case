@@ -1,7 +1,7 @@
-import './ListingSection.scss';
-import { useRef, useState } from 'react';
-import { Typography, Button, Icon, PublicationCard, Pagination } from '../ui';
-import magazineImage from '../../assets/images/1_1,6176.png';
+import "./ListingSection.scss";
+import { useRef, useState } from "react";
+import { Typography, Button, Icon, PublicationCard, Pagination } from "../ui";
+import magazineImage from "../../assets/images/1_1,6176.png";
 
 const ListingSection = () => {
   const scrollContainerRef = useRef(null);
@@ -98,7 +98,7 @@ const ListingSection = () => {
 
       scrollContainerRef.current.scrollTo({
         left: scrollAmount,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
 
@@ -117,10 +117,18 @@ const ListingSection = () => {
           <div className="listing-section__header-left">
             <div className="listing-section__title-wrapper">
               <div className="listing-section__title-content">
-                <Typography variant="small" weight="regular" className="listing-section__label">
+                <Typography
+                  variant="small"
+                  weight="regular"
+                  className="listing-section__label"
+                >
                   Sayılar
                 </Typography>
-                <Typography variant="h2" weight="bold" className="listing-section__subtitle">
+                <Typography
+                  variant="h2"
+                  weight="bold"
+                  className="listing-section__subtitle"
+                >
                   Dergiler
                 </Typography>
               </div>
@@ -138,7 +146,7 @@ const ListingSection = () => {
 
           {/* View all button */}
           <Button
-            variant="outline"
+            variant="default-filled"
             className="listing-section__view-all"
             onClick={handleViewAll}
           >
@@ -148,10 +156,7 @@ const ListingSection = () => {
         </div>
 
         {/* Scrollable cards container */}
-        <div
-          className="listing-section__cards"
-          ref={scrollContainerRef}
-        >
+        <div className="listing-section__cards" ref={scrollContainerRef}>
           {publications.map((publication, index) => (
             <PublicationCard
               key={publication.id || index}

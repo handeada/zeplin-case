@@ -7,12 +7,10 @@
   gap: 0;
   max-width: 465px;
   background-color: color("bg-white");
-  border: 1px solid color("gray-200");
   border-radius: radius("3xl");
   overflow: hidden;
-  box-shadow: map-get($shadows, "md");
   transition: all $transition-base;
-
+  padding: 16px 15px 16px 16px;
   &:hover {
     box-shadow: map-get($shadows, "lg");
   }
