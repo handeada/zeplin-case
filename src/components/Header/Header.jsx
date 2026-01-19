@@ -37,13 +37,13 @@ const Header = () => {
 
           {/* Row 2 - Navigation */}
           <div className="header__bottom-row">
-            <div className="header__bottom-col-2">
+            <div className="header__home">
               <Link to="/">
                 <Icon name="home" size="24px" />
               </Link>
             </div>
 
-            <div className="header__bottom-col-10">
+            <div className="header__nav-container">
               <nav className="header__nav">
                 <Link to="/amac-kapsam" className="header__nav-link">
                   Amaç ve Kapsam

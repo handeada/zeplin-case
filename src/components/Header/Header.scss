@@ -122,8 +122,8 @@
     }
   }
 
-  &__bottom-col-2 {
-    width: 16.666667%; // 2/12 of grid
+  &__home {
+    width: 9.75rem;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -134,8 +134,7 @@
     }
   }
 
-  &__bottom-col-10 {
-    width: 83.333333%; // 10/12 of grid
+  &__nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -192,7 +191,7 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: space("3");
+    gap: 5px;
     flex-shrink: 0;
 
     @media (max-width: 768px) {
