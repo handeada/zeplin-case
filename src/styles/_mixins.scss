@@ -2,7 +2,7 @@
 // Mixins - Zeplin Case UI Kit
 // ===========================================
 
-@use 'variables' as *;
+@use "variables" as *;
 
 // Flexbox mixins
 @mixin flex-center {
@@ -28,16 +28,16 @@
   font-family: $font-family-base;
   font-size: map-get($font-sizes, $size);
   line-height: map-get($line-heights, $size);
-  font-weight: map-get($font-weights, 'semibold');
-  color: color('text-primary');
+  font-weight: map-get($font-weights, "semibold");
+  color: color("text-primary");
 }
 
 @mixin body-text {
   font-family: $font-family-base;
-  font-size: map-get($font-sizes, 'body');
-  line-height: map-get($line-heights, 'body');
-  font-weight: map-get($font-weights, 'regular');
-  color: color('text-primary');
+  font-size: map-get($font-sizes, "body");
+  line-height: map-get($line-heights, "body");
+  font-weight: map-get($font-weights, "regular");
+  color: color("text-primary");
 }
 
 // Button base mixin
@@ -45,12 +45,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: space('2');
+  gap: space("2");
   font-family: $font-family-base;
-  font-size: map-get($font-sizes, 'body');
-  font-weight: map-get($font-weights, 'medium');
+  font-size: map-get($font-sizes, "body");
+  font-weight: map-get($font-weights, "medium");
   border: none;
-  border-radius: radius('md');
+  border-radius: radius("md");
   cursor: pointer;
   transition: all $transition-base;
   text-decoration: none;
@@ -62,40 +62,44 @@
 
 // Card mixin
 @mixin card-base {
-  background: color('bg-white');
-  border-radius: radius('xl');
-  box-shadow: map-get($shadows, 'md');
-  border: 1px solid color('gray-200');
+  background: color("bg-white");
+  border-radius: radius("xl");
+  box-shadow: map-get($shadows, "md");
+  border: 1px solid color("gray-200");
 }
 
 // Badge mixin
 @mixin badge-base {
   display: inline-flex;
   align-items: center;
-  padding: space('1') space('2');
+  padding: space("1") space("2");
   font-family: $font-family-base;
-  font-size: map-get($font-sizes, 'small');
-  font-weight: map-get($font-weights, 'medium');
-  border-radius: radius('full');
+  font-size: map-get($font-sizes, "small");
+  font-weight: map-get($font-weights, "medium");
+  border-radius: radius("full");
   white-space: nowrap;
 }
 
-// Container mixin
+// Container mixin - Responsive padding
 @mixin container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 space('6');
+  padding: 0 space("6"); // 24px desktop
 
-  @media (max-width: 768px) {
-    padding: 0 space('4');
+  @include tablet {
+    padding: 0 space("5"); // 20px tablet
+  }
+
+  @include mobile {
+    padding: 0 space("4"); // 16px mobile
   }
 }
 
 // Button disabled state mixin
 @mixin button-disabled {
-  background-color: color('gray-disabled');
-  color: color('gray-disabled-text');
+  background-color: color("gray-disabled");
+  color: color("gray-disabled-text");
   cursor: not-allowed;
   opacity: 1;
 }
@@ -115,21 +119,52 @@
   white-space: nowrap;
 }
 
-// Responsive breakpoints
+// Responsive breakpoints - Standardized
+$breakpoint-sm: 640px; // Mobile landscape
+$breakpoint-md: 768px; // Tablet portrait
+$breakpoint-lg: 1024px; // Tablet landscape / Desktop
+$breakpoint-xl: 1440px; // Large desktop
+
+// Mobile-first breakpoint mixins
 @mixin mobile {
-  @media (max-width: 639px) {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: 640px) and (max-width: 1023px) {
+  @media (min-width: $breakpoint-sm) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $breakpoint-sm) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// Specific breakpoints for fine control
+@mixin max-width($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-width($width) {
+  @media (min-width: $width) {
     @content;
   }
 }

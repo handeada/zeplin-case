@@ -1,4 +1,5 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .typography {
   font-family: $font-family-base;
@@ -9,41 +10,101 @@
   &--h1 {
     font-size: map-get($font-sizes, 'h1');
     line-height: map-get($line-heights, 'h1');
+
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, 'h1');
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, 'h1');
+    }
   }
 
   &--h2 {
     font-size: map-get($font-sizes, 'h2');
     line-height: map-get($line-heights, 'h2');
+
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, 'h2');
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, 'h2');
+    }
   }
 
   &--h3 {
     font-size: map-get($font-sizes, 'h3');
     line-height: map-get($line-heights, 'h3');
+
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, 'h3');
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, 'h3');
+    }
   }
 
   &--h4 {
     font-size: map-get($font-sizes, 'h4');
     line-height: map-get($line-heights, 'h4');
+
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, 'h4');
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, 'h4');
+    }
   }
 
   &--h5 {
     font-size: map-get($font-sizes, 'h5');
     line-height: map-get($line-heights, 'h5');
+
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, 'h5');
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, 'h5');
+    }
   }
 
   &--h6 {
     font-size: map-get($font-sizes, 'h6');
     line-height: map-get($line-heights, 'h6');
+
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, 'h6');
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, 'h6');
+    }
   }
 
   &--body {
     font-size: map-get($font-sizes, 'body');
     line-height: map-get($line-heights, 'body');
+
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, 'body');
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, 'body');
+    }
   }
 
   &--small {
     font-size: map-get($font-sizes, 'small');
     line-height: map-get($line-heights, 'small');
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, 'small');
+    }
   }
 
   // Weights

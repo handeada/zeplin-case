@@ -9,6 +9,11 @@
   border-radius: 10px;
   background-color: transparent;
 
+  @include mobile {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   // Sizes
   &--sm {
     .toggle-group__button {
@@ -51,6 +56,19 @@
     cursor: pointer;
     transition: all 150ms ease;
     white-space: nowrap;
+
+    @include tablet {
+      font-size: 16px;
+      padding: 10px 16px;
+      height: 42px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      padding: 8px 14px;
+      height: 40px;
+      gap: 8px;
+    }
 
     &:hover:not(:disabled):not(.toggle-group__button--active) {
       background-color: color('primary');

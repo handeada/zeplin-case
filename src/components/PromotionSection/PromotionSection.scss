@@ -4,6 +4,14 @@
 .promotion-section {
   padding: space("10") 0;
 
+  @include tablet {
+    padding: space("8") 0;
+  }
+
+  @include mobile {
+    padding: space("6") 0;
+  }
+
   .container {
     @include container;
   }
@@ -18,10 +26,14 @@
     box-shadow: map-get($shadows, "md");
     overflow: visible;
 
-    @media (max-width: 1024px) {
+    @include tablet {
       flex-direction: column;
       gap: space("6");
       overflow: hidden;
+    }
+
+    @include mobile {
+      gap: space("5");
     }
   }
 
@@ -55,11 +67,11 @@
       display: block;
     }
 
-    @media (max-width: 1024px) {
+    @include tablet {
       max-width: 400px;
     }
 
-    @media (max-width: 768px) {
+    @include mobile {
       max-width: 100%;
     }
   }
@@ -67,8 +79,13 @@
   &__left {
     width: 280px;
 
-    @media (max-width: 1024px) {
+    @include tablet {
       width: 100%;
+      max-width: 300px;
+    }
+
+    @include mobile {
+      max-width: 240px;
     }
   }
 
@@ -80,12 +97,17 @@
     width: 240px;
     z-index: 2;
 
-    @media (max-width: 1024px) {
+    @include tablet {
       position: relative;
       right: auto;
       top: auto;
       transform: none;
       width: 100%;
+      max-width: 280px;
+    }
+
+    @include mobile {
+      max-width: 200px;
     }
   }
 
@@ -100,10 +122,16 @@
     max-width: 550px;
     padding: space("8");
 
-    @media (max-width: 1024px) {
+    @include tablet {
       text-align: center;
       align-items: center;
       max-width: 100%;
+      padding: space("6");
+    }
+
+    @include mobile {
+      padding: space("5") space("4");
+      gap: space("3");
     }
   }
 
@@ -111,9 +139,14 @@
     color: color("error");
     margin-bottom: space("2");
     transform: rotate(-30deg);
-    @media (max-width: 1024px) {
+
+    @include tablet {
       display: flex;
       justify-content: center;
+    }
+
+    @include mobile {
+      margin-bottom: space("1");
     }
   }
 
@@ -125,6 +158,14 @@
     letter-spacing: 0.5px;
     font-weight: map-get($font-weights, "semibold");
     margin: 0;
+
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, "body");
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, "small");
+    }
   }
 
   &__title {
@@ -135,8 +176,13 @@
     color: color("text-primary");
     margin: 0;
 
-    @media (max-width: 768px) {
-      font-size: map-get($font-sizes, "h4");
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, "h3");
+      line-height: map-get($line-heights, "h3");
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, "h4");
       line-height: map-get($line-heights, "h4");
     }
   }
@@ -149,8 +195,12 @@
     color: color("text-secondary");
     margin: 0;
 
-    @media (max-width: 768px) {
-      font-size: map-get($font-sizes, "small");
+    @include tablet {
+      font-size: map-get($font-sizes-tablet, "body");
+    }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, "small");
     }
   }
 }

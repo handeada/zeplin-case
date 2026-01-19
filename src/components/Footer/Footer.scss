@@ -7,6 +7,14 @@
   padding: space("10") 0 0 0;
   margin-top: auto;
 
+  @include tablet {
+    padding: space("8") 0 0 0;
+  }
+
+  @include mobile {
+    padding: space("6") 0 0 0;
+  }
+
   .container {
     @include container;
   }
@@ -18,9 +26,15 @@
     gap: space("8");
     padding-bottom: space("8");
 
-    @media (max-width: 992px) {
+    @include tablet {
       grid-template-columns: 1fr;
       gap: space("6");
+      padding-bottom: space("6");
+    }
+
+    @include mobile {
+      gap: space("5");
+      padding-bottom: space("5");
     }
   }
 
@@ -28,6 +42,10 @@
     display: flex;
     gap: space("3");
     align-items: flex-start;
+
+    @include mobile {
+      gap: space("2.5");
+    }
   }
 
   &__icon {
@@ -38,6 +56,11 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     @include flex-center;
     color: white;
+
+    @include mobile {
+      width: 44px;
+      height: 44px;
+    }
   }
 
   &__contact-content {
@@ -48,6 +71,10 @@
       font-weight: map-get($font-weights, "regular");
       color: rgba(255, 255, 255, 0.7);
       margin-bottom: space("1");
+
+      @include mobile {
+        font-size: map-get($font-sizes-mobile, "small");
+      }
     }
 
     p {
@@ -56,6 +83,10 @@
       color: white;
       margin: 0;
       line-height: 1.6;
+
+      @include mobile {
+        font-size: map-get($font-sizes-mobile, "body");
+      }
     }
   }
 
@@ -65,6 +96,10 @@
 
   &__email {
     font-size: map-get($font-sizes, "md");
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, "body");
+    }
   }
 
   &__email-link {
@@ -79,12 +114,24 @@
     &:hover {
       text-decoration: underline;
     }
+
+    @include mobile {
+      font-size: map-get($font-sizes-mobile, "xs");
+    }
   }
 
   // Disclaimer
   &__disclaimer {
     border-top: 1px solid rgba(172, 177, 198, 1);
     padding: space("6") 0;
+
+    @include tablet {
+      padding: space("5") 0;
+    }
+
+    @include mobile {
+      padding: space("4") 0;
+    }
 
     p {
       font-size: map-get($font-sizes, "body-md");
@@ -94,6 +141,15 @@
       color: rgba(255, 255, 255, 0.6);
       text-align: center;
       margin: 0;
+
+      @include tablet {
+        font-size: map-get($font-sizes-tablet, "body");
+      }
+
+      @include mobile {
+        font-size: map-get($font-sizes-mobile, "small");
+        line-height: 1.6;
+      }
     }
   }
 
@@ -102,12 +158,20 @@
     background-color: color("error");
     padding: space("3") 0;
 
+    @include mobile {
+      padding: space("2.5") 0;
+    }
+
     p {
       text-align: center;
       font-size: 0.97rem;
       font-weight: map-get($font-weights, "regular");
       color: white;
       margin: 0;
+
+      @include mobile {
+        font-size: map-get($font-sizes-mobile, "small");
+      }
     }
   }
 }

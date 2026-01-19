@@ -18,7 +18,8 @@
       "Bash(move Button ui )",
       "Bash(move Icon ui )",
       "Bash(move Typography ui )",
-      "Bash(move:*)"
+      "Bash(move:*)",
+      "Bash(git add:*)"
     ]
   }
 }

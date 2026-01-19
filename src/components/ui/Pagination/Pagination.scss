@@ -8,6 +8,10 @@
   &__pages {
     @include flex-start;
     gap: space('2.5');
+
+    @include mobile {
+      gap: space('2');
+    }
   }
 
   // D2C Style: Rounded-square pagination buttons
@@ -29,6 +33,14 @@
     border-radius: 15px;
     cursor: pointer;
     transition: all $transition-fast;
+
+    @include mobile {
+      min-width: 36px;
+      width: 36px;
+      height: 36px;
+      font-size: 14px;
+      padding: space('2.5');
+    }
 
     &:hover:not(:disabled):not(.pagination__button--active) {
       background-color: color('gray-100');
@@ -55,9 +67,21 @@
       border-radius: 15px;
       background-color: #F5F7FF; // rgba(245, 247, 255, 1)
 
+      @include mobile {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        padding: 11px 13px;
+      }
+
       svg {
         width: 14px;
         height: 14px;
+
+        @include mobile {
+          width: 12px;
+          height: 12px;
+        }
 
         path {
           fill: #273D89; // rgba(39, 61, 137, 1)

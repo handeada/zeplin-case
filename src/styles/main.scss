@@ -2,8 +2,8 @@
 // Main Styles - Zeplin Case UI Kit
 // ===========================================
 
-@use 'variables' as *;
-@use 'mixins' as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 // Global Reset & Base Styles
 *,
@@ -23,46 +23,92 @@ html {
 body {
   font-family: $font-family-base;
   font-style: normal;
-  font-size: map-get($font-sizes, 'body');
-  line-height: map-get($line-heights, 'body');
-  color: color('text-primary');
-  background-color: color('bg-light');
+  font-size: map-get($font-sizes, "body");
+  line-height: map-get($line-heights, "body");
+  color: color("text-primary");
+  background-color: color("bg-light");
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  // Responsive font sizes
+  @include tablet {
+    font-size: map-get($font-sizes-tablet, "body");
+  }
+
+  @include mobile {
+    font-size: map-get($font-sizes-mobile, "body");
+  }
 }
 
 // Typography utility classes
-.text-primary { color: color('text-primary'); }
-.text-secondary { color: color('text-secondary'); }
-.text-muted { color: color('text-muted'); }
+.text-primary {
+  color: color("text-primary");
+}
+.text-secondary {
+  color: color("text-secondary");
+}
+.text-muted {
+  color: color("text-muted");
+}
 
 // Headings
-h1, .h1 { @include heading('h1'); }
-h2, .h2 { @include heading('h2'); }
-h3, .h3 { @include heading('h3'); }
-h4, .h4 { @include heading('h4'); }
-h5, .h5 { @include heading('h5'); }
-h6, .h6 { @include heading('h6'); }
+h1,
+.h1 {
+  @include heading("h1");
+}
+h2,
+.h2 {
+  @include heading("h2");
+}
+h3,
+.h3 {
+  @include heading("h3");
+}
+h4,
+.h4 {
+  @include heading("h4");
+}
+h5,
+.h5 {
+  @include heading("h5");
+}
+h6,
+.h6 {
+  @include heading("h6");
+}
 
 // Font weight utilities
-.font-light { font-weight: map-get($font-weights, 'light'); }
-.font-regular { font-weight: map-get($font-weights, 'regular'); }
-.font-medium { font-weight: map-get($font-weights, 'medium'); }
-.font-semibold { font-weight: map-get($font-weights, 'semibold'); }
-.font-bold { font-weight: map-get($font-weights, 'bold'); }
+.font-light {
+  font-weight: map-get($font-weights, "light");
+}
+.font-regular {
+  font-weight: map-get($font-weights, "regular");
+}
+.font-medium {
+  font-weight: map-get($font-weights, "medium");
+}
+.font-semibold {
+  font-weight: map-get($font-weights, "semibold");
+}
+.font-bold {
+  font-weight: map-get($font-weights, "bold");
+}
 
 // Link styles
 a {
-  color: color('primary');
+  color: color("primary");
   text-decoration: none;
   transition: color $transition-fast;
 
   &:hover {
-    color: color('primary-dark');
+    color: color("primary-dark");
     text-decoration: underline;
   }
 }
 
 // Selection
 ::selection {
-  background-color: color('primary-light');
-  color: color('primary-dark');
+  background-color: color("primary-light");
+  color: color("primary-dark");
 }

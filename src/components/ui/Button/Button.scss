@@ -14,6 +14,12 @@
   letter-spacing: -0.154px;
   line-height: 20px;
   transition: all $transition-base;
+  min-height: 44px; // Touch-friendly minimum for mobile devices
+
+  @include mobile {
+    min-width: 44px; // iOS/Android accessibility guidelines
+    font-size: map-get($font-sizes-mobile, "md");
+  }
 
   // ===========================================
   // Size Variants
