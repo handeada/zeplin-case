@@ -77,7 +77,7 @@
   }
 
   &__left {
-    width: 280px;
+    width: 32.13rem;
 
     @include tablet {
       width: 100%;
@@ -92,7 +92,7 @@
   &__right {
     position: absolute;
     right: space("8");
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
     width: 240px;
     z-index: 2;
