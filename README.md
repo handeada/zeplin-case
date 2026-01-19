@@ -101,11 +101,6 @@ $bg-light: #fbfbfd
 - **Font Weights:** 300 (Light), 400 (Regular), 500 (Medium), 600 (Semibold), 700 (Bold)
 - **Font Sizes:** 10px - 32px arası responsive boyutlar
 
-### Spacing
-
-- 8px grid sistemi
-- `space()` fonksiyonu ile tutarlı boşluklar
-
 ## 🔧 Geliştirme Notları
 
 ### Stil Yönetimi
