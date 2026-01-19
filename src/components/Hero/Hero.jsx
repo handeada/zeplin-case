@@ -1,5 +1,5 @@
 import "./Hero.scss";
-import { Button, Badge } from "../ui";
+import { Button, Badge, Icon } from "../ui";
 import slideBackground from "../../assets/images/slide 1.png";
 import magazineImage from "../../assets/images/dergison 1.png";
 
@@ -13,10 +13,9 @@ const Hero = () => {
         </div>
 
         <div className="hero__latest-issue">
-          <Badge variant="secondary" size="small">
-            Profuture Teknoloji Dergisi
-          </Badge>
-          <h1 className="hero__title">Son Sayı Yayında</h1>
+          <h1 className="hero__title">
+            Profuture Teknoloji Dergisi Son Sayı Yayında
+          </h1>
           <p className="hero__description">
             Profuture teknoloji mekanizmaları değişikliği alanlarında özgün
             akademik çalışmalar içeren yeni sayıya şimdi erişin.
@@ -32,11 +31,16 @@ const Hero = () => {
               <span className="hero__detail-value">7</span>
             </div>
             <div className="hero__detail-item">
+              <Icon name="calendar" size={18} />
               <span className="hero__detail-label">Haziran 2025</span>
             </div>
           </div>
 
-          <Button variant="primary" size="large">
+          <Button
+            variant="primary-filled"
+            size="large"
+            rightIcon={<Icon name="arrowRight" size={16} />}
+          >
             Dergiyi Görüntüle
           </Button>
         </div>
@@ -54,7 +58,11 @@ const Hero = () => {
             araya getiren, uluslararası hakemli ve açık erişimli bir akademik
             yayındır.
           </p>
-          <Button variant="secondary" size="medium">
+          <Button
+            variant="default-filled"
+            rightIcon={<Icon name="arrowRight" size={16} />}
+            size="medium"
+          >
             Detay
           </Button>
         </div>

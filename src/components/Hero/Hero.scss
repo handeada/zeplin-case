@@ -14,7 +14,7 @@
   &__top-row {
     position: relative;
     background-color: color("primary-dark");
-    padding: space("10") space("8");
+    padding: 8.125rem 9rem;
     overflow: visible;
     min-height: 400px;
     display: flex;
@@ -53,7 +53,7 @@
   &__latest-issue {
     position: relative;
     z-index: 1;
-    max-width: 500px;
+    max-width: 400px;
     color: color("bg-white");
 
     @media (max-width: 768px) {
@@ -105,7 +105,7 @@
 
   &__detail-item {
     display: flex;
-    gap: space("2");
+    gap: 6px;
     align-items: center;
   }
 

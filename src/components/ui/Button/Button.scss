@@ -1,5 +1,5 @@
-@use '../../../styles/variables' as *;
-@use '../../../styles/mixins' as *;
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
 
 // ===========================================
 // Button Component - Figma Design System
@@ -8,9 +8,9 @@
 
 .btn {
   @include button-base;
-  border-radius: radius('lg');
-  font-size: map-get($font-sizes, 'lg');
-  font-weight: map-get($font-weights, 'regular');
+  border-radius: radius("lg");
+  font-size: map-get($font-sizes, "lg");
+  font-weight: map-get($font-weights, "regular");
   letter-spacing: -0.154px;
   line-height: 20px;
   transition: all $transition-base;
@@ -19,18 +19,18 @@
   // Size Variants
   // ===========================================
   &--sm {
-    padding: space('2.5') 14px;
-    font-size: map-get($font-sizes, 'body');
+    padding: space("2.5") 14px;
+    font-size: map-get($font-sizes, "body");
   }
 
   &--md {
     padding: 12px 18px;
-    font-size: map-get($font-sizes, 'md');
+    font-size: map-get($font-sizes, "md");
   }
 
   &--lg {
     padding: 17px 21px;
-    font-size: map-get($font-sizes, 'lg');
+    font-size: map-get($font-sizes, "lg");
   }
 
   // ===========================================
@@ -41,19 +41,19 @@
   // Disabled: Gray bg, gray text
   // ===========================================
   &--primary {
-    background-color: color('bg-white');
-    color: color('primary');
+    background-color: color("bg-white");
+    color: color("primary");
     border: none;
 
     &:hover:not(:disabled) {
-      background-color: color('primary');
+      background-color: color("primary");
       color: white;
     }
 
     &:active:not(:disabled) {
-      background-color: color('primary-light');
-      color: color('primary');
-      border: 1px solid color('primary');
+      background-color: color("primary-light");
+      color: color("primary");
+      border: 1px solid color("primary");
     }
 
     &:disabled {
@@ -67,27 +67,27 @@
   // Hover: Primary-dark bg, white text
   // ===========================================
   &--primary-filled {
-    background-color: color('primary');
+    background-color: color("primary");
     color: white;
     padding: 17px 24px 17px 15px;
-    border: 1px solid color('gray-300');
+    border: 1px solid color("gray-300");
     border-radius: 50px;
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'md-lg');
-    font-weight: map-get($font-weights, 'regular');
+    font-size: map-get($font-sizes, "md-lg");
+    font-weight: map-get($font-weights, "regular");
     line-height: 21px;
     letter-spacing: 0%;
 
     &:hover:not(:disabled) {
-      background-color: color('primary-dark');
+      background-color: color("primary-dark");
       color: white;
-      border-color: color('gray-300');
+      border-color: color("gray-300");
     }
 
     &:active:not(:disabled) {
-      background-color: color('primary-dark');
+      background-color: color("primary-dark");
       color: white;
-      border-color: color('gray-300');
+      border-color: color("gray-300");
     }
 
     &:disabled {
@@ -99,19 +99,19 @@
   // Secondary Button (D2C Green: #a8b95e)
   // ===========================================
   &--secondary {
-    background-color: color('bg-white');
-    color: color('secondary');
+    background-color: color("bg-white");
+    color: color("secondary");
     border: none;
 
     &:hover:not(:disabled) {
-      background-color: color('secondary');
+      background-color: color("secondary");
       color: white;
     }
 
     &:active:not(:disabled) {
-      background-color: color('success-light');
-      color: color('secondary');
-      border: 1px solid color('secondary');
+      background-color: color("success-light");
+      color: color("secondary");
+      border: 1px solid color("secondary");
     }
 
     &:disabled {
@@ -125,27 +125,61 @@
   // Hover: Secondary-dark bg (#2b3016), white text
   // ===========================================
   &--secondary-filled {
-    background-color: color('secondary');
+    background-color: color("secondary");
     color: white;
     padding: 17px 24px 17px 15px;
-    border: 1px solid color('gray-300');
+    border: 1px solid color("gray-300");
     border-radius: 50px;
     font-family: $font-family-base;
-    font-size: map-get($font-sizes, 'md-lg');
-    font-weight: map-get($font-weights, 'regular');
+    font-size: map-get($font-sizes, "md-lg");
+    font-weight: map-get($font-weights, "regular");
     line-height: 21px;
     letter-spacing: 0%;
 
     &:hover:not(:disabled) {
-      background-color: color('secondary-dark');
+      background-color: color("secondary-dark");
       color: white;
-      border-color: color('gray-300');
+      border-color: color("gray-300");
     }
 
     &:active:not(:disabled) {
-      background-color: color('secondary-dark');
+      background-color: color("secondary-dark");
       color: white;
-      border-color: color('gray-300');
+      border-color: color("gray-300");
+    }
+
+    &:disabled {
+      @include button-disabled;
+    }
+  }
+
+  // ===========================================
+  // Default Filled Button (Figma variant)
+  // Default: White bg, gray border, dark gray text
+  // Hover: Primary-dark bg, primary-dark border, white text
+  // ===========================================
+  &--default-filled {
+    background-color: color("bg-white");
+    color: color("gray-500");
+    padding: 17px 24px 17px 15px;
+    border: 1px solid color("gray-300");
+    border-radius: 50px;
+    font-family: $font-family-base;
+    font-size: map-get($font-sizes, "md-lg");
+    font-weight: map-get($font-weights, "regular");
+    line-height: 21px;
+    letter-spacing: 0%;
+
+    &:hover:not(:disabled) {
+      background-color: color("primary-dark");
+      color: white;
+      border-color: color("primary-dark");
+    }
+
+    &:active:not(:disabled) {
+      background-color: color("primary-dark");
+      color: white;
+      border-color: color("primary-dark");
     }
 
     &:disabled {
@@ -158,22 +192,22 @@
   // ===========================================
   &--outline {
     background-color: transparent;
-    color: color('primary');
-    border: 1px solid color('primary');
+    color: color("primary");
+    border: 1px solid color("primary");
 
     &:hover:not(:disabled) {
-      background-color: color('primary');
+      background-color: color("primary");
       color: white;
     }
 
     &:active:not(:disabled) {
-      background-color: color('primary-light');
-      color: color('primary');
+      background-color: color("primary-light");
+      color: color("primary");
     }
 
     &:disabled {
       @include button-disabled;
-      border-color: color('gray-disabled');
+      border-color: color("gray-disabled");
     }
   }
 
@@ -182,15 +216,15 @@
   // ===========================================
   &--ghost {
     background-color: transparent;
-    color: color('text-secondary');
+    color: color("text-secondary");
     padding: 8px;
     min-width: 36px;
     min-height: 36px;
     border: none;
 
     &:hover:not(:disabled) {
-      background-color: color('gray-50');
-      color: color('text-primary');
+      background-color: color("gray-50");
+      color: color("text-primary");
     }
   }
 
@@ -200,7 +234,7 @@
   // ===========================================
   &--icon {
     background-color: transparent;
-    color: color('text-secondary');
+    color: color("text-secondary");
     padding: 0;
     width: 55px;
     height: 55px;
@@ -209,18 +243,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid color('gray-300');
+    border: 1px solid color("gray-300");
     border-radius: 100px;
 
     &:hover:not(:disabled) {
-      background-color: color('gray-50');
-      color: color('text-primary');
-      border-color: color('primary');
+      background-color: color("gray-50");
+      color: color("text-primary");
+      border-color: color("primary");
     }
 
     &:active:not(:disabled) {
-      background-color: color('primary-light');
-      border-color: color('primary');
+      background-color: color("primary-light");
+      border-color: color("primary");
     }
   }
 
@@ -229,17 +263,17 @@
   // ===========================================
   &--social {
     background-color: transparent;
-    color: color('text-secondary');
+    color: color("text-secondary");
     padding: 18.5px;
     min-width: 55px;
     min-height: 55px;
     border-radius: 100px;
-    border: 1px solid color('gray-300');
+    border: 1px solid color("gray-300");
 
     &:hover:not(:disabled) {
-      background-color: color('gray-50');
-      color: color('text-primary');
-      border-color: color('primary');
+      background-color: color("gray-50");
+      color: color("text-primary");
+      border-color: color("primary");
     }
   }
 
@@ -247,13 +281,13 @@
   // Success Button
   // ===========================================
   &--success {
-    background-color: color('success');
+    background-color: color("success");
     color: white;
     border: none;
-    border-radius: radius('full');
+    border-radius: radius("full");
 
     &:hover:not(:disabled) {
-      background-color: color('secondary-dark');
+      background-color: color("secondary-dark");
     }
 
     &:disabled {
@@ -265,13 +299,13 @@
   // Error Button
   // ===========================================
   &--error {
-    background-color: color('error');
+    background-color: color("error");
     color: white;
     border: none;
-    border-radius: radius('full');
+    border-radius: radius("full");
 
     &:hover:not(:disabled) {
-      background-color: color('error-dark');
+      background-color: color("error-dark");
     }
 
     &:disabled {
@@ -288,11 +322,11 @@
     justify-content: center;
 
     &--left {
-      margin-right: 8px;
+      margin-right: 10px;
     }
 
     &--right {
-      margin-left: 8px;
+      margin-left: 10px;
     }
   }
 
