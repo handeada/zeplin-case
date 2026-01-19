@@ -104,7 +104,7 @@ const PublicationCard = ({
             className="publication-card__action-btn publication-card__action-btn--navigate"
             onClick={onNavigate}
           >
-            <Icon name="arrow-right" size={24} />
+            <Icon name="arrowRight" size={24} />
           </Button>
         </div>
       </div>

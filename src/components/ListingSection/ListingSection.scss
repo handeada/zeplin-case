@@ -85,18 +85,7 @@
   &__cards {
     display: flex;
     gap: space('6');
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-bottom: space('4');
-    margin-bottom: -#{space('4')};
-
-    /* Hide scrollbar but keep functionality */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-
-    &::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera */
-    }
+    overflow: hidden;
 
     @media (max-width: 768px) {
       gap: space('4');
