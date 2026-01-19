@@ -1,16 +1,141 @@
-# React + Vite
+# Profuture Teknoloji Dergisi - Frontend Projesi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, Profuture Teknoloji Dergisi için geliştirilmiş modern bir web uygulamasıdır. React ve Vite kullanılarak oluşturulmuş, responsive ve kullanıcı dostu bir arayüz sunar.
 
-Currently, two official plugins are available:
+## 🚀 Teknolojiler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refreshh
+- **React 18** - Modern UI geliştirme
+- **Vite** - Hızlı geliştirme ortamı
+- **SCSS** - Gelişmiş stil yönetimi
+- **ESLint** - Kod kalitesi
+- **Component-Based Architecture** - Yeniden kullanılabilir bileşenler
 
-## React Compiler
+## 📦 Kurulum
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Projeyi yerel ortamınızda çalıştırmak için:
 
-## Expanding the ESLint configuration
+```bash
+# Bağımlılıkları yükleyin
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Geliştirme sunucusunu başlatın
+npm run dev
+
+# Production build oluşturun
+npm run build
+
+# Build önizlemesi
+npm run preview
+```
+
+## 🎨 Proje Yapısı
+
+```
+src/
+├── assets/          # Görseller ve medya dosyaları
+├── components/      # React bileşenleri
+│   ├── ui/         # Yeniden kullanılabilir UI bileşenleri
+│   │   ├── Badge/
+│   │   ├── Button/
+│   │   ├── Icon/
+│   │   ├── PublicationCard/
+│   │   └── ...
+│   ├── Header/     # Ana navigasyon
+│   ├── Footer/     # Alt bilgi
+│   ├── Hero/       # Ana banner bölümü
+│   ├── ListingSection/      # Dergi listesi
+│   ├── PromotionSection/    # Makale çağrısı
+│   └── CTASection/          # Call-to-action
+├── pages/          # Sayfa bileşenleri
+├── styles/         # Global stil dosyaları
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   └── main.scss
+└── App.jsx         # Ana uygulama bileşeni
+```
+
+## 🎯 Özellikler
+
+### UI Bileşenleri
+
+- **Button** - Çoklu variant'lar (primary, secondary, error, outline, ghost, icon)
+- **Badge** - Farklı renk ve boyut seçenekleri
+- **Icon** - 50+ SVG ikon seti
+- **PublicationCard** - Dergi kartları (YENİ badge, Son Sayı badge desteği)
+- **Typography** - Tutarlı tipografi sistemi
+- **Pagination** - Sayfa navigasyonu
+
+### Ana Bölümler
+
+- **Header** - Responsive navigasyon menüsü
+- **Hero Section** - Ana banner ve dergi tanıtımı
+- **Listing Section** - Dergi arşivi (navigasyon arrow'ları ile)
+- **Promotion Section** - Makale çağrısı banner'ı
+- **CTA Section** - Son sayı ve öne çıkan makaleler
+- **Footer** - İletişim bilgileri ve sosyal medya linkleri
+
+## 🎨 Tasarım Sistemi
+
+### Renkler
+
+```scss
+// Birincil Renkler
+$primary: #273d89       // Ana mavi
+$primary-dark: #112053  // Koyu mavi
+$primary-light: #ebefff // Açık mavi
+
+// İkincil Renkler
+$secondary: #a8b95e     // Yeşil/Zeytin
+$error: #db0d15         // Kırmızı
+$warning: #de8536       // Turuncu
+
+// Nötr Renkler
+$gray-300: #acb1c6
+$gray-500: #2a2c31
+$bg-light: #fbfbfd
+```
+
+### Tipografi
+
+- **Font Family:** Inter
+- **Font Weights:** 300 (Light), 400 (Regular), 500 (Medium), 600 (Semibold), 700 (Bold)
+- **Font Sizes:** 10px - 32px arası responsive boyutlar
+
+### Spacing
+
+- 8px grid sistemi
+- `space()` fonksiyonu ile tutarlı boşluklar
+
+## 🔧 Geliştirme Notları
+
+### Stil Yönetimi
+
+- SCSS modülleri kullanılmıştır
+- BEM metodolojisi ile class isimlendirme
+- Mixin ve variable'lar ile yeniden kullanılabilir stiller
+- Mobile-first responsive tasarım
+
+### Component Yapısı
+
+- Her component kendi klasöründe (Component.jsx + Component.scss)
+- Props ile esnek ve yeniden kullanılabilir bileşenler
+- Default props ile güvenli kullanım
+
+### Tamamlanan Görevler
+
+- ✅ Component-based mimari kurulumu
+- ✅ SCSS ile gelişmiş stil yönetimi
+- ✅ Responsive tasarım implementasyonu
+- ✅ Reusable UI component library
+- ✅ Icon sistemi entegrasyonu
+- ✅ Tutarlı tasarım sistemi (colors, typography, spacing)
+- ✅ BEM metodolojisi ile temiz CSS
+- ✅ Modern React patterns (hooks, props, composition)
+
+## 📄 Lisans
+
+Bu proje bir assignment projesidir.
+
+## 👨‍💻 Geliştirici
+
+Profuture Teknoloji Dergisi Frontend Assignment
