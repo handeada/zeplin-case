@@ -1,13 +1,14 @@
-import './PublicationCard.scss';
-import Badge from '../Badge/Badge';
-import Icon from '../Icon/Icon';
-import Button from '../Button/Button';
-import Typography from '../Typography/Typography';
+import "./PublicationCard.scss";
+import Badge from "../Badge/Badge";
+import Icon from "../Icon/Icon";
+import Button from "../Button/Button";
+import Typography from "../Typography/Typography";
 
 const PublicationCard = ({
   image,
   isNew = false,
-  type = 'Dergi',
+  isLatest = false,
+  type = "Dergi",
   title,
   volume,
   issue,
@@ -15,11 +16,14 @@ const PublicationCard = ({
   onView,
   onDownload,
   onNavigate,
-  className = '',
+  className = "",
   ...props
 }) => {
   return (
     <div className={`publication-card ${className}`} {...props}>
+      {isLatest && (
+        <div className="publication-card__latest-badge">Son Sayı</div>
+      )}
       {/* Left side - Magazine cover image */}
       <div className="publication-card__image">
         <img src={image} alt={title} />
@@ -37,13 +41,21 @@ const PublicationCard = ({
         {/* PDF Icon and Type */}
         <div className="publication-card__type">
           <Icon name="file" size={24} />
-          <Typography variant="small" weight="regular" className="publication-card__type-text">
+          <Typography
+            variant="small"
+            weight="regular"
+            className="publication-card__type-text"
+          >
             {type}
           </Typography>
         </div>
 
         {/* Title */}
-        <Typography variant="h5" weight="bold" className="publication-card__title">
+        <Typography
+          variant="h5"
+          weight="bold"
+          className="publication-card__title"
+        >
           {title}
         </Typography>
 

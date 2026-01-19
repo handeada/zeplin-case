@@ -2,6 +2,7 @@
 @use "../../../styles/mixins" as *;
 
 .publication-card {
+  position: relative;
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 0;
@@ -9,6 +10,7 @@
   background-color: color("bg-white");
   border-radius: radius("3xl");
   overflow: hidden;
+  border: 1px solid color("gray-200");
   transition: all $transition-base;
   padding: 16px 15px 16px 16px;
   &:hover {
@@ -29,6 +31,24 @@
       object-fit: cover;
       display: block;
     }
+  }
+
+  // Latest issue badge (left side, vertical)
+  &__latest-badge {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(100%) rotate(-90deg);
+    transform-origin: left center;
+    background-color: color("error");
+    color: white;
+    padding: 15px 27px 15px 27px;
+    font-family: $font-family-base;
+    font-size: map-get($font-sizes, "body");
+    font-weight: map-get($font-weights, "semibold");
+    white-space: nowrap;
+    z-index: 2;
+    border-radius: 0px 0px 25px 25px;
   }
 
   // Right side - Content

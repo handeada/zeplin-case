@@ -38,6 +38,7 @@ const ListingSection = () => {
       id: 3,
       image: magazineImage,
       isNew: false,
+      isLatest: true,
       type: "Dergi",
       title: "Teknoloji ve Dijital Dergisi",
       volume: 1,
@@ -162,6 +163,7 @@ const ListingSection = () => {
               key={publication.id || index}
               image={publication.image}
               isNew={publication.isNew}
+              isLatest={publication.isLatest}
               type={publication.type}
               title={publication.title}
               volume={publication.volume}
